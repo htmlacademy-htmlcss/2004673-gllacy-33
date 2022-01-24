@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Gllacy Shop</title>
+      <base href="https://htmlacademy-htmlcss.github.io/2004673-gllacy-33/2/">
+</head>
+    <body>
+        <header class="header">
+            <img class="header__logo" src="#" alt="logo">
+            <nav class="header__navigation navigation">
+                <ul class="navigation__list navbar">
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="#">Каталог</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="#">Доставка и оплата</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="#">О компании</a>
+                    </li>
+                </ul>
+            </nav>
+            <a class="header__phone" href="#">+7 800 555-86-28</a>
+            <input class="header__search" type="image" src="#" alt="Поиск">
+            <button class="header__login login" type="submit">
+                <img class="login__img" src="#" alt="Вход">
+                Вход
+            </button>
+            <button class="header__basket basket" type="submit">
+                <img class="basket__img" src="#" alt="Пусто">
+                Пусто
+            </button>
+        </header>
+        <main class="main">
+            <section class="main__slider slider">
+                <ul class="slider__list content">
+                    <li class="content__item item">
+                        <div class="item__container icecream">
+                            <h2 class="icecream__name">Нежный пломбир с клубничным джемом</h2>
+                            <p class="icecream__description">Натуральное мороженое из свежих сливок и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи. </p>
+                            <input class="icecream__order" type="button" value="Заказать">
+                        </div>
+                        <img class="item__img" src="#" alt="Рожок">
+                        <span class="item__chevron left"></span>
+                        <span class="item__chevron right"></span>
+                    </li>
+                    <!-- По идее здесь должны быть еще li с подобным наполнением. Для слайдера -->
+                </ul>
+                <!--Не знаю как точки правильно выставить, по идее можно и через ul>li, но правильно ли это будет?-->
+                <div class="slider__dots dots">
+                    <img class="dots__img" src="#" alt="Точка">
+                    <img class="dots__img" src="#" alt="Точка">
+                    <img class="dots__img" src="#" alt="Точка">
+                </div>
+                <!--Та же история, что и с точками-->
+                <div class="slider__social socials">
+                    <a class = "socials__link vk" href="">
+                        <img class="vk__img" src="#" alt="VK">
+                    </a>
+                    <a class="socials__link facebook" href="">
+                        <img class="facebook__img" src="#" alt="Facebook">
+                    </a>
+                    <a class="socials__link instagram" href="">
+                        <img class="instagram__img" src="#" alt="Instagram">
+                    </a>
+                </div>
+            </section>
+            <section class="main__gifts gift">
+                <h3 class="gift__title">Заказывайте мороженое и получайте подарки!</h3>
+                <ul class="gift__list gifts">
+                    <li class="gifts__item offer">
+                        <h4 class="offer__title">Малинка даром!</h4>
+                        <p class="offer__description">При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового варенья бесплатно.</p>
+                        <input class="offer__button" type="button" value="Хочу подарок">
+                        <!--Картинка вместе с фоном уйдет в CSS через background-->
+                    </li>
+                    <li class="gifts__item offer">
+                        <h4 class="offer__title">Маршмеллоу даром!</h4>
+                        <p class="offer__description">При покупке 2 кг пломбира добавим в ваш заказ упаковку нежных зефирок совершенно бесплатно.</p>
+                        <input class="offer__button" type="button" value="Хочу подарок">
+                        <!--Картинка вместе с фоном уйдет в CSS через background-->
+                    </li>
+                </ul>
+            </section>
+            <section class="main__kinds kinds">
+                <h3 class="kinds__title">Попробуйте самые популярные вкусы нашего мороженого</h3>
+                <ul class="kinds__list tastes">
+                    <li class="tastes__item taste">
+                        <img class="taste__img" src="#" alt="Малинка">
+                        <h5 class="taste__title">Малинка</h5>
+                        <p class="taste__description">Сливочное мороженое с малиновым джемом</p>
+                        <div class="taste__pricelist data">
+                            <p class="data__price">310 ₽/кг</p>
+                            <input class="data__order" type="image" src="#" alt="Купить">
+                        </div>
+                    </li>
+                    <li class="tastes__item taste">
+                        <img class="taste__img" src="#" alt="Фисташка">
+                        <h5 class="taste__title">Фисташка</h5>
+                        <p class="taste__description">Фисташковый пломбир с кусочками шоколада</p>
+                        <div class="taste__pricelist data">
+                            <p class="data__price">340 ₽/кг</p>
+                            <input class="data__order" type="image" src="#" alt="Купить">
+                        </div>
+                    </li>
+                    <li class="tastes__item taste">
+                        <img class="taste__img" src="#" alt="Черника">
+                        <h5 class="taste__title">Черника</h5>
+                        <p class="taste__description">Крем-брюле с черничным джемом</p>
+                        <div class="taste__pricelist data">
+                            <p class="data__price">330 ₽/кг</p>
+                            <input class="data__order" type="image" src="#" alt="Купить">
+                        </div>
+                    </li>
+                    <li class="tastes__item taste">
+                        <img class="taste__img" src="#" alt="Бабл-гам">
+                        <h5 class="taste__title">Бабл-гам</h5>
+                        <p class="taste__description">Ванильный пломбир со сладкой посыпкой</p>
+                        <div class="taste__pricelist data">
+                            <p class="data__price">3120 ₽/кг</p>
+                            <input class="data__order" type="image" src="#" alt="Купить">
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section class="main__advantages advantages">
+                <h3 class="advantages__title">Магазин Глейси – это онлайн и офлайн-магазин по продаже мороженого собственного проиводства на развес</h3>
+                <ul class="advantages__list advantage">
+                    <li class="advantage__item">Закупка ингредиентов производится только у проверенных фермерских хозяйств, с которыми нас связывает долговременное сотрудничество.</li>
+                    <li class="advantage__item">Всё наше мороженое изготавливается на собственном производстве с использованием современного оборудования и проверенных временем технологий.</li>
+                    <li class="advantage__item">Для приготовления мороженого используются сливки и молоко высочайшего качества. Все ингредиенты и добавки произведены из натурального сырья.</li>
+                    <li class="advantage__item">Доставка нашего мороженого осуществляется в специальном термопаке, который не даёт мороженому растаять и позволяет сохранить превосходный вкус.</li>
+                </ul>
+            </section>
+            <section class="main__information info">
+                <div class="info__container news">
+                    <!--По этой части тоже есть вопросы, в первом блоке вроде идет как статья, поэтому чисто из теории, что проходила - это article, правильно ли?-->
+                    <article class="news__blog blog">
+                        <p class="blog__description">Новое в нашем блоге</p>
+                        <h6 class="blog__title">10 способов сервировки фруктовых щербетов к столу</h6>
+                    </article>
+                     <!--И по этой - тут мое предположение, скорее всего очень отдаленное от реальности. Просто хочу понять, можно ли так, или это неправильное использование данного тега?-->
+                    <aside class="news__mail mail">
+                        <p class="mail__description">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+                        <form class="mail__form send">
+                            <label class="send__label" for="email"></label>
+                            <input class="send__address" type="email" name="email" placeholder="email@example.com">
+                            <input class="send__button" type="button" value="Отправить">
+                        </form>
+                    </aside>
+                </div>
+            </section>
+            <section class="main__delivery delivery">
+                <div class="delivery__container">
+                    <h3 class="delivery__title">Доставка любимого мороженого на дом</h3>
+                    <p class="delivery__description">Хочется полакомиться любимым дессертом, но нет времени съездить в магазин? Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!</p>
+                    <div class="delivery__subcontainer card">
+                        <p class="card__description">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.</p>
+                        <form class="card__form record">
+                            <label class="record__label" for="date">Дата</label>
+                            <input class="record__date" type="date" name="date" placeholder="01.04.2020">
+                            <label class="record__label" for="tel">Телефон</label>
+                            <input class="record__phone" type="tel" name="tel" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" placeholder="+7 800 999-00-00" required>
+                            <label class="record__label" for="address">Адрес</label>
+                            <textarea class="record__address" id="address" name="address" rows="2" placeholder="ул. Большая Конюшенная, 19/8" required></textarea>
+                            <input class="record__button" type="submit" value="Отправить">
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section class="main__location location">
+                <div class="location__container">
+                    <p class="location__description">Адрес главного офиса и офлайн-магазина:</p>
+                    <p class="location__description main-address">наб. реки Карповки,5 лит П, Санкт-Петербург</p>
+                    <p class="location__description">Для заказов по телефону:</p>
+                    <p class="location__description main-phone">+7 (812) 812-12-12</p>
+                    <p class="location__description">(с 10 до 20 ежедневно)</p>
+                    <input class="location__button" type="button" value="Форма обратной связи">
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__links socials">
+                <a class="socials__link vk" href="">
+                    <img class="vk__img" src="#" alt="VK">
+                </a>
+                <a class="socials__link facebook" href="">
+                    <img class="facebook__img" src="#" alt="Facebook">
+                </a>
+                <a class="socials__link instagram" href="">
+                    <img class="instagram__img" src="#" alt="Instagram">
+                </a>
+            </div>
+            <div class="footer__links files">
+                <ul class="files__list">
+                    <li class="files__item">
+                        <a class="files__link" href="">Для поставщиков</a> <!--Будет другой подкласс для изменения CSS-->
+                    </li>
+                    <li class="files__item">
+                        <a class="files__link" href="">О производстве</a> 
+                    </li>
+                    <li class="files__item">
+                        <a class="files__link" href="">Наши документы</a> 
+                    </li>
+                    <li class="files__item">
+                        <a class="files__link" href="">Экологические стандарты</a> 
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__author author">
+                <img class="author__logo" src="#" alt="logo html">
+                <p class="author__description">Сделано в .html academy © 2021</p>
+            </div>
+        </footer>
+    </body>
+</html>

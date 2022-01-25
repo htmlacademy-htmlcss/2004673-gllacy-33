@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Gllacy Shop</title>
+    <base href="https://htmlacademy-htmlcss.github.io/2004673-gllacy-33/2/">
+</head>
+  <body>
+    <header class="header">
+      <a href="#"><img class="header__logo" src="#" alt="logo"></a>
+      <nav class="header__navigation navigation">
+        <ul class="navigation__list navbar">
+          <li class="navbar__item">
+            <a class="navbar__link" href="#">Каталог</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="#">Доставка и оплата</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="#">О компании</a>
+          </li>
+        </ul>
+      </nav>
+      <a class="header__phone" href="tel:+7 800 555-86-28">+7 800 555-86-28</a> <!--Вроде вставила по протоколу, но W3C ругается, что для href использование такого значения недопустимо-->
+      <button class="header__search" type="submit"></button>
+      <button class="header__login login" type="submit">Вход</button>
+      <button class="header__basket basket" type="submit">Пусто</button>
+    </header>
+    <main class="catalog">
+      <ul class="catalog__list breadcrumb"> <!-- Вот здесь я не уверена. Не припомню, что это было в курсе. И ранее "хлебных крошек" не касалась -->
+        <li class="breadcrumb__item"> 
+          <a class="breadcrumb__link" href="#">Главное</a>
+        </li>
+        <li class="breadcrumb__item">
+          <a class="breadcrumb__link" href="#" >Каталог</a>
+        </li>
+        <li class="breadcrumb__item">
+          <a class="breadcrumb__link" href="#">Сливочное</a>
+        </li>
+      </ul>
+      <h1 class="catalog__title">Сливочное мороженое</h1>
+      <div class="catalog__container container">
+        <form class="container__form options">
+          <select class="options__sort" name="sorting">
+            <option class="options__populatiry" value="по популярности">по популярности</option>
+          </select>
+          <div class="options__range"> <!-- Два бегунка - это сложно. Насколько я поняла, в html они пишутся как два, а все остальное через CSS и JS, дополнительно label тут если один оставлять, то непонятно к чему привязывать, id то получается 2-->
+            <label class="options__price" for="price">Цена: 100₽-500₽ </label>
+            <input class="options__price-1" type="range" id="price-1" name="price-1" min="100" max="500" step="1"> 
+            <input class="price-2" type="range" id="price-2" name="price-2" min="100" max="500" step="1"> 
+          </div>
+          <div class="options__fat percent">
+            <label class="percent__label" for="fat">Жирность:</label>
+            <select class="percent__fat" id="fat" name="fat">
+              <option class="percent-1" value="0">0%</option>
+              <option class="percent-2" value="10">до 10%</option>
+              <option class="percent-3" value="30">до 30%</option>
+              <option class="percent-4" value="30+">выше 30%</option>
+            </select>
+          </div>
+          <div class="options__supplement supplement">
+            <label class="supplement__label" for="supplement">Наполнители:</label>
+            <select class="supplement__vars" id="supplement" name="supplement" multiple size="5">
+              <option class="supplement__choco" value="chocolate">шоколадные</option>
+              <option class="supplement__sugar" value="sugar">сахарные посыпки</option>
+              <option class="supplement__fruits" value="fruits">фрукты</option>
+              <option class="syrup" value="syrup">сиропы</option>
+              <option class="jam" value="jam">джемы</option>
+            </select>
+          </div>
+          <button class="options__button" type="submit">Применить</button>
+        </form>
+        <ul class="catalog__tastes tastes">
+          <li class="tastes__item taste">
+            <img class="taste__img" src="#" alt="Малинка">
+            <h5 class="taste__title">Малинка</h5>
+            <p class="taste__description">Сливочное мороженое с малиновым джемом</p>
+            <div class="taste__pricelist data">
+              <p class="data__price">310 ₽/кг</p>
+              <button class="data__order" type="submit">Купить</button>
+            </div>
+          </li>
+          <li class="catalog__tastes taste">
+            <img class="taste__img" src="#" alt="Фисташка">
+            <h5 class="taste__title">Фисташка</h5>
+            <p class="taste__description">Фисташковый пломбир с кусочками шоколада</p>
+            <div class="taste__pricelist data">
+              <p class="data__price">340 ₽/кг</p>
+              <button class="data__order" type="submit">Купить</button>
+            </div>
+          </li>
+          <li class="catalog__tastes taste">
+            <img class="taste__img" src="#" alt="Черника">
+            <h5 class="taste__title">Черника</h5>
+            <p class="taste__description">Крем-брюле с черничным джемом</p>
+            <div class="taste__pricelist data">
+              <p class="data__price">330 ₽/кг</p>
+              <button class="data__order" type="submit">Купить</button>
+            </div>
+          </li>
+          <li class="catalog__tastes taste">
+            <img class="taste__img" src="#" alt="Бабл-гам">
+            <h5 class="taste__title">Бабл-гам</h5>
+            <p class="taste__description">Ванильный пломбир со сладкой посыпкой</p>
+            <div class="taste__pricelist data">
+              <p class="data__price">3120 ₽/кг</p>
+              <button class="data__order" type="submit">Купить</button>
+            </div>
+          </li>
+          <li class="catalog__tastes taste">
+            <img class="taste__img" src="#" alt="Ежевика">
+            <h5 class="taste__title">Ежевика</h5>
+            <p class="taste__description">Сливочное мороженое с ежевичным джемом</p>
+            <div class="taste__pricelist data">
+              <p class="data__price">330 ₽/кг</p>
+              <button class="data__order" type="submit">Купить</button>
+            </div>
+          </li>
+          <li class="catalog__tastes taste">
+            <img class="taste__img" src="#" alt="Банан">
+            <h5 class="taste__title">Банан</h5>
+            <p class="taste__description">Сливочный пломбир с банановым вкусом</p>
+            <div class="taste__pricelist data">
+              <p class="data__price">340 ₽/кг</p>
+              <button class="data__order" type="submit">Купить</button>
+            </div>
+          </li>
+          <li class="catalog__tastes taste">
+            <img class="taste__img" src="#" alt="Шоколадка">
+            <h5 class="taste__title">Шоколадка</h5>
+            <p class="taste__description">Классический шоколадный пломбир</p>
+            <div class="taste__pricelist data">
+              <p class="data__price">270 ₽/кг</p>
+              <button class="data__order" type="submit">Купить</button>
+            </div>
+          </li>
+          <li class="catalog__tastes taste">
+            <img class="taste__img" src="#" alt="Клубничка">
+            <h5 class="taste__title">Клубничка</h5>
+            <p class="taste__description">Сливочный пломбир с клубничным вкусом</p>
+            <div class="taste__pricelist data">
+              <p class="data__price">300 ₽/кг</p>
+              <button class="data__order" type="submit">Купить</button>
+            </div>
+          </li>
+          <li class="catalog__tastes taste">
+            <img class="taste__img" src="#" alt="Лимон">
+            <h5 class="taste__title">Лимон</h5>
+            <p class="taste__description">Освежающий лимонный сорбет</p>
+            <div class="taste__pricelist data">
+              <p class="data__price">310 ₽/кг</p>
+              <button class="data__order" type="submit">Купить</button>
+            </div>
+          </li>
+          <li class="catalog__tastes taste">
+            <img class="taste__img" src="#" alt="Ментол">
+            <h5 class="taste__title">Ментол</h5>
+            <p class="taste__description">Сливочный пломбир с ментоловым сиропом</p>
+            <div class="taste__pricelist data">
+              <p class="data__price">320 ₽/кг</p>
+              <button class="data__order" type="submit">Купить</button>
+            </div>
+          </li>
+          <li class="catalog__tastes taste">
+            <img class="taste__img" src="#" alt="Орешек">
+            <h5 class="taste__title">Орешек</h5>
+            <p class="taste__description">Фисташковый пломбир с шоколадным сиропом</p>
+            <div class="taste__pricelist data">
+              <p class="data__price">360 ₽/кг</p>
+              <button class="data__order" type="submit">Купить</button>
+            </div>
+          </li>
+          <li class="catalog__tastes taste">
+            <img class="taste__img" src="#" alt="Крем-брюле">
+            <h5 class="taste__title">Крем-брюле</h5>
+            <p class="taste__description">Классический крем-брюле</p>
+            <div class="taste__pricelist data">
+              <p class="data__price">280 ₽/кг</p>
+              <button class="data__order" type="submit">Купить</button>
+            </div>
+          </li>
+        </ul>
+        <button class="catalog__view" type="submit">Показать еще</button>
+        <ul class="catalog__pagination pagination">
+          <li class="pagination__item">
+            <a class="pagination__link" href="#"><img src="#" alt="#"></a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link" href="#">1</a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link" href="#">2</a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link" href="#">3</a>
+          </li>
+          <li class="pagination__item"> 
+            <a class="pagination__link" href="#">4</a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link" href="#">5</a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link" href="#"><img src="#" alt="#"></a>
+          </li>
+        </ul>
+      </div>
+      <br>
+    </main>
+    <footer class="footer">
+      <div class="footer__links socials">
+        <a class="socials__link vk" href="">
+          <img class="vk__img" src="#" alt="VK">
+        </a>
+        <a class="socials__link facebook" href="">
+          <img class="facebook__img" src="#" alt="Facebook">
+        </a>
+        <a class="socials__link instagram" href="">
+          <img class="instagram__img" src="#" alt="Instagram">
+        </a>
+      </div>
+      <div class="footer__links files">
+        <ul class="files__list">
+          <li class="files__item">
+            <a class="files__link" href="#">Для поставщиков</a> <!--Будет другой подкласс для изменения CSS-->
+          </li>
+          <li class="files__item">
+            <a class="files__link" href="#">О производстве</a> 
+          </li>
+          <li class="files__item">
+            <a class="files__link" href="#">Наши документы</a> 
+          </li>
+          <li class="files__item">
+            <a class="files__link" href="#">Экологические стандарты</a> 
+          </li>
+        </ul>
+      </div>
+      <div class="footer__author author">
+        <a href=""><img class="author__logo" src="#" alt="logo html"></a>
+        <p class="author__description">Сделано в .html academy © 2021</p>
+      </div>
+    </footer>
+  </body>
+</html>

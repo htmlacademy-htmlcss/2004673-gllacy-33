@@ -6,8 +6,8 @@
   </head>
   <body>
     <header class="header">
-      <a href="#"><img class="header__logo" src="#" alt="logo"></a>
       <nav class="header__navigation navigation">
+        <a href="#"><img class="navigation__logo" src="#" alt="logo"></a>
         <ul class="navigation__list navbar">
           <li class="navbar__item">
             <a class="navbar__link" href="#">Каталог</a>
@@ -20,10 +20,10 @@
           </li>
         </ul>
       </nav>
-      <a class="header__phone" href="tel:+7 800 555-86-28">+7 800 555-86-28</a> <!--Вроде вставила по протоколу, но W3C ругается, что для href использование такого значения недопустимо-->
-      <button class="header__search" type="submit"></button>
-      <button class="header__login login" type="submit">Вход</button>
-      <button class="header__basket basket" type="submit">Пусто</button>
+      <a class="header__phone" href="tel:+78005558628">+7 800 555-86-28</a> <!--Вроде вставила по протоколу, но W3C ругается, что для href использование такого значения недопустимо-->
+      <button class="header__search" type="button"></button>
+      <button class="header__login login" type="button">Вход</button>
+      <button class="header__basket basket" type="button">Пусто</button>
     </header>
     <main class="catalog">
       <ul class="catalog__list breadcrumb"> <!-- Вот здесь я не уверена. Не припомню, что это было в курсе. И ранее "хлебных крошек" не касалась -->
@@ -39,34 +39,86 @@
       </ul>
       <h1 class="catalog__title">Сливочное мороженое</h1>
       <div class="catalog__container container">
-        <form class="container__form options">
-          <select class="options__sort" name="sorting">
+        <form class="container__form options" action="https://echo.htmlacademy.ru/" method="get">
+          <select class="options__sort" aria-label="Сортировка">
             <option class="options__populatiry" value="по популярности">по популярности</option>
           </select>
-          <div class="options__range"> <!-- Два бегунка - это сложно. Насколько я поняла, в html они пишутся как два, а все остальное через CSS и JS, дополнительно label тут если один оставлять, то непонятно к чему привязывать, id то получается 2-->
-            <label class="options__price" for="price">Цена: 100₽-500₽ </label>
-            <input class="options__price-1" type="range" id="price-1" name="price-1" min="100" max="500" step="1"> 
-            <input class="price-2" type="range" id="price-2" name="price-2" min="100" max="500" step="1"> 
+
+          <div class="options__rang">
+            <label class="min-price" for="price-1">Цена: 100₽-500₽
+              <input class="price-1" type="range" id="price-1" name="min-price" value="100">
+            </label>
+            <label class="max-price" for="price-2">
+              <input class="price-2" type="range" id="price-2" name="max-price"  value="500">
+            </label>
           </div>
-          <div class="options__fat percent">
-            <label class="percent__label" for="fat">Жирность:</label>
-            <select class="percent__fat" id="fat" name="fat">
-              <option class="percent-1" value="0">0%</option>
-              <option class="percent-2" value="10">до 10%</option>
-              <option class="percent-3" value="30">до 30%</option>
-              <option class="percent-4" value="30+">выше 30%</option>
-            </select>
-          </div>
-          <div class="options__supplement supplement">
-            <label class="supplement__label" for="supplement">Наполнители:</label>
-            <select class="supplement__vars" id="supplement" name="supplement" multiple size="5">
-              <option class="supplement__choco" value="chocolate">шоколадные</option>
-              <option class="supplement__sugar" value="sugar">сахарные посыпки</option>
-              <option class="supplement__fruits" value="fruits">фрукты</option>
-              <option class="syrup" value="syrup">сиропы</option>
-              <option class="jam" value="jam">джемы</option>
-            </select>
-          </div>
+
+          <fieldset class="options__fat percent">
+            <legend class="cpercent-title">Жирность:</legend>
+            <ul class="percent-list">
+              <li class="percent-item">
+                <label class="control">
+                  <input class="control-input" type="radio" name="product-group" value="shaving-supplies">
+                  0%
+                </label>
+              </li>
+              <li class="percent-item">
+                <label class="control">
+                  <input class="control-input" type="radio" name="product-group" value="care-products" checked>
+                  до 10%
+                </label>
+              </li>
+              <li class="percent-item">
+                <label class="control">
+                  <input class="control-input" type="radio" name="product-group" value="accessories">
+                  до 30%
+                </label>
+              </li>
+              <li class="percent-item">
+                <label class="control">
+                  <input class="control-input" type="radio" name="product-group" value="accessories">
+                  выше 30%
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="button" type="submit">Показать</button>
+
+          <fieldset class="options__supplement supplement">
+            <legend class="supplement__label">Наполнители</legend>
+            <ul class="supplement__list">
+              <li class="supplement-item">
+                <label class="control">
+                  <input class="control-input" type="checkbox" name="bed-head-for-men">
+                  шоколадные
+                </label>
+              </li>
+              <li class="supplement-item">
+                <label class="control">
+                  <input class="control-input" type="checkbox" name="homme-deep-cleansing-cool" checked>
+                  сахарные посыпки
+                </label>
+              </li>
+              <li class="supplement-item">
+                <label class="control">
+                  <input class="control-input" type="checkbox" name="so-intense" checked>
+                  фрукты
+                </label>
+              </li>
+              <li class="supplement-item">
+                <label class="control">
+                  <input class="control-input" type="checkbox" name="sprekenhus">
+                  сиропы
+                </label>
+              </li>
+              <li class="supplement-item">
+                <label class="control">
+                  <input class="control-input" type="checkbox" name="firm-storе">
+                  джемы
+                </label>
+              </li>
+            </ul>
+          </fieldset>
           <button class="options__button" type="submit">Применить</button>
         </form>
         <ul class="catalog__tastes tastes">

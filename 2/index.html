@@ -7,10 +7,10 @@
 </head>
   <body>
     <header class="header">
-      <a class="header__logo logo">
-        <img class="logo__img" src="#" alt="logo">
-      </a>
       <nav class="header__navigation navigation">
+        <a class="navigation__logo logo">
+          <img class="logo__img" src="#" alt="logo">
+        </a>
         <ul class="navigation__list navbar">
           <li class="navbar__item">
             <a class="navbar__link" href="#">Каталог</a>
@@ -23,13 +23,14 @@
           </li>
         </ul>
       </nav>
-      <a class="header__phone" href="tel:+7 800 555-86-28">+7 800 555-86-28</a> <!--Вроде вставила по протоколу, но W3C ругается, что для href использование такого значения недопустимо-->
-      <button class="header__search" type="submit"></button>
-      <button class="header__login login" type="submit">Вход</button>
-      <button class="header__basket basket" type="submit">Пусто</button>
+      <a class="header__phone" href="tel:+78005558628">+7 800 555-86-28</a> 
+      <button class="header__search" type="button"></button>
+      <button class="header__login login" type="button">Вход</button>
+      <button class="header__basket basket" type="button">Пусто</button>
     </header>
     <main class="main">
       <section class="main__slider slider">
+        <h1 class="visually-hidden">Gllacy Shop</h1>
         <ul class="slider__list content">
           <li class="content__item item">
             <div class="item__container icecream">

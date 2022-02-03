@@ -7,12 +7,12 @@
   <body>
     <header class="header">
       <nav class="header__navigation navigation">
-        <a class="navigation__logo logo">
-          <img class="logo__img" src="#" alt="logo">
+        <a href="./index.html" class="navigation__logo logo">
+          <img class="logo__img" src="./images/logo/glacy_logo.svg" width="137" height="56" alt="Gllacy logo">
         </a>
         <ul class="navigation__list navbar">
           <li class="navbar__item">
-            <a class="navbar__link" href="#">Каталог</a>
+            <a class="navbar__link" href="./catalog.html">Каталог</a>
           </li>
           <li class="navbar__item">
             <a class="navbar__link" href="#">Доставка и оплата</a>
@@ -34,47 +34,51 @@
           <li class="content__item item">
             <div class="item__container icecream">
               <h2 class="icecream__name">Нежный пломбир с клубничным джемом</h2>
-              <p class="icecream__description">Натуральное мороженое из свежих сливок и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи. </p>
-              <button class="icecream__order" type="button">Заказать</button>
+              <p class="icecream__description">Натуральное мороженое из свежих сливок и молока с вкуснейшим клубничным 
+              джемом – это идеальный десерт для всей семьи. </p>
+              <a class="icecream__order" href="./catalog.html">Заказать</a> 
+              <!-- В теории тут должна быть ссылка, т.к. по логике она должна вести на страницу каталога -->
             </div>
-            <img class="item__img" src="#" alt="Рожок">
+            <img class="item__img" src="./images/slider/slider1_icecream.png" width="306" height="507" alt="Мороженое">
             <span class="item__chevron left"></span>
             <span class="item__chevron right"></span>
           </li>
           <!-- По идее здесь должны быть еще li с подобным наполнением. Для слайдера -->
         </ul>
-        <!--Не знаю как точки правильно выставить, по идее можно и через ul>li, но правильно ли это будет?-->
-        <div class="slider__dots dots">
-          <img class="dots__img" src="#" alt="Точка">
-          <img class="dots__img" src="#" alt="Точка">
-          <img class="dots__img" src="#" alt="Точка">
-        </div>
-        <!--Та же история, что и с точками-->
-        <div class="slider__social socials">
-          <a class = "socials__link vk" href="">
-            <img class="vk__img" src="#" alt="VK">
-          </a>
-          <a class="socials__link facebook" href="">
-            <img class="facebook__img" src="#" alt="Facebook">
-          </a>
-          <a class="socials__link instagram" href="">
-            <img class="instagram__img" src="#" alt="Instagram">
-          </a>
-        </div>
+        <div class="slider__dots dots"></div>
+        <ul class="slider__social socials">
+          <li>
+            <a class="socials__link vk" href="https://vk.com/htmlacademy">
+              <span class="visually-hidden">VK</span>
+            </a>
+          </li>
+          <li>
+            <a class="socials__link facebook" href="https://www.facebook.com/htmlacademy">
+              <span class="visually-hidden">Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a class="socials__link instagram" href="https://www.instagram.com/htmlacademy/">
+              <span class="visually-hidden">Instagram</span>
+            </a>
+          </li>
+        </ul>
       </section>
       <section class="main__gifts gift">
         <h3 class="gift__title">Заказывайте мороженое и получайте подарки!</h3>
         <ul class="gift__list gifts">
           <li class="gifts__item offer">
             <h4 class="offer__title">Малинка даром!</h4>
-            <p class="offer__description">При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового варенья бесплатно.</p>
-            <button class="offer__button" type="button">Хочу подарок</button>
+            <p class="offer__description">При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку 
+            малинового варенья бесплатно.</p>
+            <a class="offer__button" href="#">Хочу подарок</a> <!--Также ссылка-->
             <!--Картинка вместе с фоном уйдет в CSS через background-->
           </li>
           <li class="gifts__item offer">
             <h4 class="offer__title">Маршмеллоу даром!</h4>
-            <p class="offer__description">При покупке 2 кг пломбира добавим в ваш заказ упаковку нежных зефирок совершенно бесплатно.</p>
-            <button class="offer__button" type="button">Хочу подарок</button>
+            <p class="offer__description">При покупке 2 кг пломбира добавим в ваш заказ упаковку нежных зефирок 
+            совершенно бесплатно.</p>
+            <a class="offer__button" href="#">Хочу подарок</a> <!--Также ссылка-->
             <!--Картинка вместе с фоном уйдет в CSS через background-->
           </li>
         </ul>
@@ -83,78 +87,108 @@
       <h3 class="kinds__title">Попробуйте самые популярные вкусы нашего мороженого</h3>
         <ul class="kinds__list tastes">
           <li class="tastes__item taste">
-            <img class="taste__img" src="#" alt="Малинка">
-            <h5 class="taste__title">Малинка</h5>
+            <img class="taste__img" src="./images/catalog/raspberry.jpg" width="168" height="168" alt="Мороженое Малинка">
+            <h4 class="taste__title">Малинка</h4>
             <p class="taste__description">Сливочное мороженое с малиновым джемом</p>
             <div class="taste__pricelist data">
               <p class="data__price">310 ₽/кг</p>
-              <button class="data__order" type="submit">Купить</button>
+              <button class="data__order" type="button">
+                <span class="visually-hidden">Купить</span>
+              </button>
             </div>
           </li>
           <li class="tastes__item taste">
-            <img class="taste__img" src="#" alt="Фисташка">
-            <h5 class="taste__title">Фисташка</h5>
+            <img class="taste__img" src="./images/catalog/pistachio.jpg" width="168" height="168" alt="Мороженое Фисташка">
+            <h4 class="taste__title">Фисташка</h4>
             <p class="taste__description">Фисташковый пломбир с кусочками шоколада</p>
             <div class="taste__pricelist data">
               <p class="data__price">340 ₽/кг</p>
-              <button class="data__order" type="submit">Купить</button>
+              <button class="data__order" type="button">
+                <span class="visually-hidden">Купить</span>
+              </button>
             </div>
           </li>
           <li class="tastes__item taste">
-            <img class="taste__img" src="#" alt="Черника">
-            <h5 class="taste__title">Черника</h5>
+            <img class="taste__img" src="./images/catalog/blueberries.jpg" width="168" height="168" alt="Мороженое Черника">
+            <h4 class="taste__title">Черника</h4>
             <p class="taste__description">Крем-брюле с черничным джемом</p>
             <div class="taste__pricelist data">
               <p class="data__price">330 ₽/кг</p>
-              <button class="data__order" type="submit">Купить</button>
+              <button class="data__order" type="button">
+                <span class="visually-hidden">Купить</span>
+              </button>
             </div>
           </li>
           <li class="tastes__item taste">
-            <img class="taste__img" src="#" alt="Бабл-гам">
-            <h5 class="taste__title">Бабл-гам</h5>
+            <img class="taste__img" src="./images/catalog/bubble.jpg" width="168" height="168" alt="Мороженое Бабл-гам">
+            <h4 class="taste__title">Бабл-гам</h4>
             <p class="taste__description">Ванильный пломбир со сладкой посыпкой</p>
             <div class="taste__pricelist data">
-              <p class="data__price">3120 ₽/кг</p>
-              <button class="data__order" type="submit">Купить</button>
+              <p class="data__price">320 ₽/кг</p>
+              <button class="data__order" type="button">
+                <span class="visually-hidden">Купить</span>
+              </button>
             </div>
           </li>
         </ul>
       </section>
       <section class="main__advantages advantages">
-        <h3 class="advantages__title">Магазин Глейси – это онлайн и офлайн-магазин по продаже мороженого собственного проиводства на развес</h3>
+        <h3 class="advantages__title">Магазин Глейси – это онлайн и офлайн-магазин по продаже мороженого собственного 
+        проиводства на развес</h3>
         <ul class="advantages__list advantage">
-          <li class="advantage__item">Закупка ингредиентов производится только у проверенных фермерских хозяйств, с которыми нас связывает долговременное сотрудничество.</li>
-          <li class="advantage__item">Всё наше мороженое изготавливается на собственном производстве с использованием современного оборудования и проверенных временем технологий.</li>
-          <li class="advantage__item">Для приготовления мороженого используются сливки и молоко высочайшего качества. Все ингредиенты и добавки произведены из натурального сырья.</li>
-          <li class="advantage__item">Доставка нашего мороженого осуществляется в специальном термопаке, который не даёт мороженому растаять и позволяет сохранить превосходный вкус.</li>
+          <li class="advantage__item">Закупка ингредиентов производится только у проверенных фермерских хозяйств, 
+          с которыми нас связывает долговременное сотрудничество.</li>
+          <li class="advantage__item">Всё наше мороженое изготавливается на собственном производстве с использованием 
+          современного оборудования и проверенных временем технологий.</li>
+          <li class="advantage__item">Для приготовления мороженого используются сливки и молоко высочайшего качества. 
+          Все ингредиенты и добавки произведены из натурального сырья.</li>
+          <li class="advantage__item">Доставка нашего мороженого осуществляется в специальном термопаке, который не даёт
+          мороженому растаять и позволяет сохранить превосходный вкус.</li>
         </ul>
         <div class="main__information info">
           <article class="info__blog blog">
-            <a href="#"><p class="blog__description">Новое в нашем блоге</p></a>
-            <a href="#"><h6 class="blog__title">10 способов сервировки фруктовых щербетов к столу</h6></a>
+            <a class="blog__description" href="#">Новое в нашем блоге</a>
+            <a href="#">
+              <h4 class="blog__title">10 способов сервировки фруктовых щербетов к столу</h4>
+            </a>
           </article>
           <aside class="info__mail mail">
-            <p class="mail__description">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+            <p class="mail__description">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого 
+            вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
             <form class="mail__form send">
               <label class="send__label" for="email"></label>
               <input class="send__address" type="email" id="email" placeholder="email@example.com">
-              <button class="send__button" type="submit">Отправить</button>
+              <button class="send__button" type="button">Отправить</button>
             </form>
           </aside>
           </div> 
       </section>
       <section class="main__delivery delivery">
         <h3 class="delivery__title">Доставка любимого мороженого на дом</h3>
-        <p class="delivery__description">Хочется полакомиться любимым дессертом, но нет времени съездить в магазин? Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!</p>
-        <p class="delivery__description">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.</p>
+        <p class="delivery__description">Хочется полакомиться любимым дессертом, но нет времени съездить в магазин? 
+        Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!</p>
+        <p class="delivery__description">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.
+        </p>
         <form class="delivery__form record">
           <label class="record__label" for="date">Дата</label>
           <input class="record__date" type="date" id="date">
           <label class="record__label" for="tel">Телефон</label>
-          <input class="record__phone" type="tel" id="tel" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" placeholder="+7 800 999-00-00" required>
+          <input class="record__phone" 
+            type="tel" 
+            id="tel" 
+            pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" 
+            placeholder="+7 800 999-00-00" 
+            required>
           <label class="record__label" for="address">Адрес</label>
-          <textarea class="record__address" id="address" name="address" rows="2" placeholder="ул. Большая Конюшенная, 19/8" required></textarea>
-          <button class="record__button" type="submit">Отправить</button>
+          <textarea 
+            class="record__address" 
+            id="address" 
+            name="address" 
+            rows="2" 
+            placeholder="ул. Большая Конюшенная, 19/8" 
+            required
+          ></textarea>
+          <button class="record__button" type="button">Отправить</button>
           </form>
         <div class="delivery__container location">
           <p class="location__description">Адрес главного офиса и офлайн-магазина:</p>
@@ -162,43 +196,49 @@
           <p class="location__description">Для заказов по телефону:</p>
           <p class="location__description main-phone">+7 (812) 812-12-12</p>
           <p class="location__description">(с 10 до 20 ежедневно)</p>
-          <button class="location__button" type="submit">Форма обратной связи</button>
+          <button class="location__button" type="button">Форма обратной связи</button>
         </div>
       </section>
     </main>
     <footer class="footer">
-      <div class="footer__links socials">
-        <a class="socials__link vk" href="">
-          <img class="vk__img" src="#" alt="VK">
-        </a>
-        <a class="socials__link facebook" href="">
-          <img class="facebook__img" src="#" alt="Facebook">
-        </a>
-        <a class="socials__link instagram" href="">
-          <img class="instagram__img" src="#" alt="Instagram">
-        </a>
-      </div>
+      <ul class="footer__links socials">
+        <li>
+          <a class="socials__link vk" href="https://vk.com/htmlacademy">
+            <span class="visually-hidden">VK</span>
+          </a>
+        </li>
+        <li>
+          <a class="socials__link facebook" href="https://www.facebook.com/htmlacademy">
+            <span class="visually-hidden">Facebook</span>
+          </a>
+        </li>
+        <li>
+          <a class="socials__link instagram" href="https://www.instagram.com/htmlacademy/">
+            <span class="visually-hidden">Instagram</span>
+          </a>
+        </li>
+      </ul>
       <div class="footer__links files">
         <ul class="files__list">
           <li class="files__item">
-            <a class="files__link" href="">Для поставщиков</a> <!--Будет другой подкласс для изменения CSS-->
+            <a class="files__link" href="#">Для поставщиков</a> <!--Будет другой подкласс для изменения CSS-->
           </li>
           <li class="files__item">
-            <a class="files__link" href="">О производстве</a> 
+            <a class="files__link" href="#">О производстве</a> 
           </li>
           <li class="files__item">
-            <a class="files__link" href="">Наши документы</a> 
+            <a class="files__link" href="#">Наши документы</a> 
           </li>
           <li class="files__item">
-            <a class="files__link" href="">Экологические стандарты</a> 
+            <a class="files__link" href="#">Экологические стандарты</a> 
           </li>
         </ul>
       </div>
       <div class="footer__author author">
-        <a href="">
-          <img class="author__logo" src="#" alt="logo html">
+        <a href="https://htmlacademy.ru/">
+          <img class="author__logo" src="./images/logo/htmlacademy_logo.svg" alt="Html logo">
         </a>
-        <p class="author__description">Сделано в .html academy © 2021</p>
+        <a class="author__description" href="https://htmlacademy.ru/">Сделано в <span>.html academy</span> © 2021</a>
       </div>
     </footer>
   </body>

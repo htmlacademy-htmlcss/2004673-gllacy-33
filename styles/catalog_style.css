@@ -20,7 +20,7 @@ a{
   line-height: 20px;
   color: #2D3440;
 }
-.link__catalog{
+.hov{
   background: #FF4A78;
   border-radius: 26px;
   width: 95px;
@@ -178,7 +178,7 @@ a{
   width: 24px;
   height: 24px;
 }
-.main_link{
+.active{
   font-weight: bold;
   font-size: 14px;
   line-height: 20px;

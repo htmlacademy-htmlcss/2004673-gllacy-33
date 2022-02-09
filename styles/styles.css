@@ -214,7 +214,6 @@ body {
 
 .data__order {
   background: #ff2f64 url("../images/icon/cartblack_icon.svg") no-repeat;
-  background-color: #ff2f64;
   border-radius: 50%;
   border: 0;
   width: 32px;
@@ -297,7 +296,6 @@ body {
   margin: 6px;
   width: 558px;
   height: 208px;
-  width: 100%;
   background-color: #fcfcfc;
   border-radius: 16px;
 }
@@ -393,30 +391,6 @@ body {
   list-style-type: none;
 }
 
-.vk {
-  display: flex; 
-  background-image: url("../images/socials/vk.svg");
-  background-repeat: no-repeat;
-  width: 24px;
-  height: 24px;
-}
-
-.facebook {
-  display: flex; 
-  background-image: url("../images/socials/facebook.svg");
-  background-repeat: no-repeat;
-  width: 24px;
-  height: 24px;
-}
-
-.instagram {
-  display: flex; 
-  background-image: url("../images/socials/instagram.svg");
-  background-repeat: no-repeat;
-  width: 24px;
-  height: 24px;
-}
-
 .active {
   font-weight: bold;
   font-size: 14px;
@@ -437,12 +411,12 @@ body {
 }
 /* Catalog */
 
-.current {
+.navbar__link--current {
   background: #ff4a78;
   border-radius: 26px;
   width: 95px;
   height: 36px;
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: normal;
   line-height: 20px;

@@ -24,12 +24,22 @@
             </li>
           </ul>
         </nav>
-        <a class="header__phone" href="tel:+78005558628">+7 800 555-86-28</a>
-        <button class="header__search" type="button"></button>
-        <button class="header__login login" type="button">Вход</button>
-        <button class="header__basket basket" type="button">Пусто</button>
+        <ul class="header-list dropdown">
+          <li class="dropdown__item">
+            <a class="dropdown__phone" href="tel:+78005558628">+7 800 555-86-28</a>
+          </li>
+          <li class="dropdown__item">
+            <button class="dropdown__search" type="button"></button>
+          </li>
+          <li class="dropdown__item">
+            <button class="dropdown__login login" type="button">Вход</button>
+          </li>
+          <li class="dropdown__item">
+            <button class="dropdown__basket basket" type="button">Пусто</button>
+          </li>
+        </ul>
       </header>
-      <main class="main">
+      <main class="main-container main">
         <section class="main__slider slider">
           <h1 class="visually-hidden">Gllacy Shop</h1>
           <ul class="slider__list content">
@@ -41,9 +51,19 @@
                 <a class="icecream__order" href="./catalog.html">Заказать</a>
                 <!-- В теории тут должна быть ссылка, т.к. по логике она должна вести на страницу каталога -->
               </div>
-              <img class="item__img" src="./images/slider/slider1_icecream.png" width="306" height="507" alt="Мороженое">
-              <span class="item__chevron left"></span>
-              <span class="item__chevron right"></span>
+              <ul class="slider__image image">
+                <li class="image__item image__item--current">
+                  <img class="item__img" src="./images/slider/slider1_icecream.png" alt="Мороженое">
+                  <span class="item__chevron left"></span>
+                  <span class="item__chevron right"></span>
+                </li>
+                <li class="image__item item" >
+                  <img class="item__img" src="./images/slider/slider2_icecream.png" alt="Мороженое">
+                </li>
+                <li class="image__item item">
+                  <img class="item__img" src="./images/slider/slider3_icecream.png" alt="Мороженое">
+                </li>
+              </ul>
             </li>
             <!-- По идее здесь должны быть еще li с подобным наполнением. Для слайдера -->
           </ul>
@@ -147,10 +167,10 @@
                 <h3 class="advantages__title">Магазин Глейси – это онлайн и офлайн-магазин по продаже мороженого собственного
               проиводства на развес</h3>
               <ul class="advantages__list advantage">
-                <li class="advantage__item">Закупка ингредиентов производится только у проверенных фермерских хозяйств,
-                с которыми нас связывает долговременное сотрудничество.</li>
                 <li class="advantage__item">Всё наше мороженое изготавливается на собственном производстве с использованием
                 современного оборудования и проверенных временем технологий.</li>
+                <li class="advantage__item">Закупка ингредиентов производится только у проверенных фермерских хозяйств,
+                с которыми нас связывает долговременное сотрудничество.</li>
                 <li class="advantage__item">Для приготовления мороженого используются сливки и молоко высочайшего качества.
                 Все ингредиенты и добавки произведены из натурального сырья.</li>
                 <li class="advantage__item">Доставка нашего мороженого осуществляется в специальном термопаке, который не даёт
@@ -180,9 +200,11 @@
         </section>
         <section class="main__delivery delivery">
           <div class="delivery__container">
-            <h3 class="delivery__title">Доставка любимого мороженого на дом</h3>
-            <p class="delivery__description">Хочется полакомиться любимым дессертом, но нет времени съездить в магазин?
+            <div class="delivery__background">
+              <h3 class="delivery__title">Доставка любимого мороженого на дом</h3>
+              <p class="delivery__description">Хочется полакомиться любимым дессертом, но нет времени съездить в магазин?
             Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!</p>
+            </div>
             <div class="delivery__form form">
               <p class="delivery__description">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.</p>
               <form class="delivery__form record">
@@ -209,12 +231,16 @@
             </div>
           </div>
           <div class="delivery__location location">
-            <p class="location__description">Адрес главного офиса и офлайн-магазина:</p>
-            <p class="location__description main-address">наб. реки Карповки,5 лит П, Санкт-Петербург</p>
-            <p class="location__description">Для заказов по телефону:</p>
-            <p class="location__description main-phone">+7 (812) 812-12-12</p>
-            <p class="location__description">(с 10 до 20 ежедневно)</p>
-            <button class="location__button" type="button">Форма обратной связи</button>
+            <div class="location-container">
+              <p class="location__description">Адрес главного офиса и офлайн-магазина:
+                <br>
+                <span class="location__street">наб. реки Карповки,5 лит П, Санкт-Петербург</span>
+              </p>
+              <p class="location__description">Для заказов по телефону:</p>
+              <a class="location__description main-phone" href="tel:+78128121212">+7 812 812-12-12</a>
+              <p class="location__description">(с 10 до 20 ежедневно)</p>
+              <button class="location__button" type="button">Форма обратной связи</button>
+            </div>
           </div>
         </section>
       </main>

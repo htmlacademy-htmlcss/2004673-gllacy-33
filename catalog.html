@@ -24,12 +24,22 @@
             </li>
           </ul>
         </nav>
-        <a class="header__phone" href="tel:+78005558628">+7 800 555-86-28</a>
-        <button class="header__search" type="button"></button>
-        <button class="header__login login" type="button">Вход</button>
-        <button class="header__basket basket" type="button">Пусто</button>
+        <ul class="header-list dropdown">
+          <li class="dropdown__item">
+            <a class="dropdown__phone" href="tel:+78005558628">+7 800 555-86-28</a>
+          </li>
+          <li class="dropdown__item">
+            <button class="dropdown__search" type="button"></button>
+          </li>
+          <li class="dropdown__item">
+            <button class="dropdown__login login" type="button">Вход</button>
+          </li>
+          <li class="dropdown__item">
+            <button class="dropdown__basket basket" type="button">2 товара</button>
+          </li>
+        </ul>
       </header>
-      <main class="catalog">
+      <main class="main-container catalog">
         <ul class="catalog__list breadcrumb">
           <li class="breadcrumb__item"> 
             <a class="breadcrumb__link" href="./index.html">Главное</a>
@@ -255,36 +265,38 @@
               </div>
             </li>
           </ul>
-          <button class="catalog__view" type="button">Показать еще</button>
-          <ul class="catalog__pagination pagination">
-            <li class="pagination__item">
+          <div class="catalog__pagination pagination">
+            <button class="pagination__view" type="button">Показать еще</button>
+            <ul class="pagination__list">
+              <li class="pagination__item">
               <a class="pagination__link" href="#">
                 <img src="./images/icon/arrow_left_icon.svg" width="16" height="16" alt="Назад">
               </a>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__link" href="#">1</a>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__link" href="#">2</a>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__link" href="#">3</a>
-            </li>
-            <li class="pagination__item"> 
-              <a class="pagination__link" href="#">4</a>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__link" href="#">5</a>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__link" href="#">
-                <img src="./images/icon/arrow_right_icon.svg" width="16" height="16" alt="Вперед">
-              </a>
-            </li>
-          </ul>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">1</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">2</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">3</a>
+              </li>
+              <li class="pagination__item"> 
+                <a class="pagination__link" href="#">4</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">5</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">
+                  <img src="./images/icon/arrow_right_icon.svg" width="16" height="16" alt="Вперед">
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <br>
+        <hr>
       </main>
       <footer class="footer">
         <ul class="footer__links socials">

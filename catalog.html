@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Gllacy Shop</title>
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
@@ -26,25 +27,24 @@
         </nav>
         <ul class="header-list dropdown">
           <li class="dropdown__item">
-            <a class="dropdown__phone" href="tel:+78005558628">+7 800 555-86-28</a>
+            <a class="dropdown__link phone" href="tel:+78005558628">+7 800 555-86-28</a>
           </li>
-          <li class="dropdown__item">
-            <a class="dropdown__search" href="#">
+          <li class="dropdown__item search">
+            <a class="dropdown__link" href="#">
               <span class="visually-hidden">Поиск</span>
             </a>
           </li>
-          <li class="dropdown__item">
-            <a class="dropdown__login login" href="#">Вход</a>
+          <li class="dropdown__item login">
+            <a class="dropdown__link" href="#">Вход</a>
           </li>
-          <li class="dropdown__item">
-            <a class="dropdown__basket basket" href="#">2 товара</a>
-          </li>
+          <li class="dropdown__item basket">
+            <a class="dropdown__link" href="#">2 товара</a>
           </li>
         </ul>
       </header>
       <main class="main-container catalog">
         <ul class="catalog__list breadcrumb">
-          <li class="breadcrumb__item"> 
+          <li class="breadcrumb__item">
             <a class="breadcrumb__link" href="./index.html">Главное</a>
           </li>
           <li class="breadcrumb__item">
@@ -289,7 +289,7 @@
               <li class="pagination__item">
                 <a class="pagination__link" href="#">3</a>
               </li>
-              <li class="pagination__item"> 
+              <li class="pagination__item">
                 <a class="pagination__link" href="#">4</a>
               </li>
               <li class="pagination__item">
@@ -337,20 +337,20 @@
             <a class="files__link" href="#">Для поставщиков</a> <!--Будет другой подкласс для изменения CSS-->
           </li>
           <li class="files__item">
-            <a class="files__link" href="#">О производстве</a> 
+            <a class="files__link" href="#">О производстве</a>
           </li>
           <li class="files__item">
-            <a class="files__link" href="#">Наши документы</a> 
+            <a class="files__link" href="#">Наши документы</a>
           </li>
           <li class="files__item">
-            <a class="files__link" href="#">Экологические стандарты</a> 
+            <a class="files__link" href="#">Экологические стандарты</a>
           </li>
         </ul>
         <div class="footer__author author">
           <a href="https://htmlacademy.ru/">
             <img class="author__logo" src="./images/logo/htmlacademy_logo.svg" alt="Html logo">
           </a>
-          <a class="author__description" href="https://htmlacademy.ru/">Сделано в <span>.html academy</span> © 2021</a>
+          <a class="author__description" href="https://htmlacademy.ru/">Сделано в <span class="author__html">.html academy</span> © 2021</a>
         </div>
       </footer>
     </div>

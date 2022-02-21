@@ -47,7 +47,7 @@ body {
   max-width: 1170px;
 }
 
-.main>*:not(:last-child) {
+.main > *:not(:last-child) {
   margin-bottom: 80px;
 }
 
@@ -60,6 +60,15 @@ body {
   border: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.common-button {
+  padding: 12px 28px;
+  min-height: 44px;
+  font-weight: bold;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 26px;
 }
 
 /*Header*/
@@ -90,15 +99,13 @@ body {
 .navigation__list {
   display: flex;
   flex-wrap: wrap;
+  margin-left: 16px;
 }
 
 .navbar__item {
   padding: 8px 16px;
 }
 
-.navbar__item:first-child {
-  margin-left: 16px;
-}
 
 .navbar__link {
   display: flex;
@@ -210,10 +217,7 @@ body {
 
 .icecream__order {
   display: flex;
-  padding: 8px 32px;
   max-width: 139px;
-  font-weight: bold;
-  line-height: 20px;
   background-color: #fcfcfc;
   border: 4px solid rgba(252, 252, 252, 0.4);
   /*-webkit-background-clip: padding-box;
@@ -254,11 +258,8 @@ body {
 .socials {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
-}
-
-.footer .socials {
   max-width: 104px;
+  margin-left: auto;
 }
 
 .socials__item {
@@ -324,10 +325,7 @@ body {
 }
 
 .gifts__button {
-  padding: 7px 16px;
   max-width: 176px;
-  font-weight: bold;
-  line-height: 22px;
   text-align: center;
   color: #2d3440;
   text-decoration: none;
@@ -356,17 +354,16 @@ body {
 }
 
 .tastes__item {
-  display: flex;
   min-height: 332px;
-  flex-direction: column;
-  align-items: center;
   background-color: #fcfcfc;
   border-radius: 8px;
   list-style-type: none;
+  text-align: center;
 }
 
 .taste__pricelist {
   display: flex;
+  justify-content: space-around;
 }
 
 .taste__img {
@@ -376,8 +373,7 @@ body {
 
 .taste__title {
   margin-bottom: 8px;
-  width: 270px;
-  text-align: center;
+  padding: 0 40px 0 40px;
   font-weight: bold;
   font-size: 20px;
   line-height: 24px;
@@ -385,11 +381,10 @@ body {
 
 .taste__description {
   margin-bottom: 16px;
-  width: 190px;
+  padding: 0 40px 0 40px;
   font-weight: normal;
   line-height: 22px;
   color: #565c66;
-  text-align: center;
 }
 
 .data__price {
@@ -397,6 +392,7 @@ body {
   font-weight: bold;
   font-size: 20px;
   line-height: 24px;
+  justify-content: flex-start;
 }
 
 .data__order {
@@ -406,6 +402,7 @@ body {
   border: 0;
   background: #ff2f64 url("../images/icon/cartblack_icon.svg") no-repeat;
   background-position: center center;
+  justify-content: flex-end;
 }
 
 /*advantages*/
@@ -546,10 +543,7 @@ body {
 }
 
 .send__button {
-  width: 152px;
-  height: 44px;
-  font-weight: bold;
-  line-height: 20px;
+  max-width: 152px;
   color: #fcfcfc;
   text-align: center;
   background: #ff2f64;
@@ -684,16 +678,12 @@ body {
 
 .record__button {
   margin: 32px auto 0 auto;
-  width: 152px;
-  height: 44px;
-  font-weight: bold;
-  line-height: 20px;
+  max-width: 152px;
   color: #fcfcfc;
   text-align: center;
   background: #ff2f64;
   border: 4px solid rgba(252, 47, 100, 0.3);
   box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
-  border-radius: 26px;
 }
 
 /*location*/
@@ -761,12 +751,7 @@ body {
   background: #ff2f64;
   border: 4px solid rgba(255, 47, 100, 0.3);
   box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
-  border-radius: 26px;
-  width: 250px;
-  height: 46px;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 20px;
+  max-width: 250px;
   color: #fcfcfc;
 }
 
@@ -983,13 +968,8 @@ hr {
   background: #fcfcfc;
   border: 4px solid rgba(252, 252, 252, 0.4);
   box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
-  border-radius: 26px;
-  width: 179px;
-  height: 44px;
+  max-width: 179px;
   font-family: "Inter", sans-serif;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 20px;
   text-align: center;
   margin-right: 300px;
 }

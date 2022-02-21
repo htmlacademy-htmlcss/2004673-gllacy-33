@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Gllacy Shop</title>
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
@@ -26,16 +27,18 @@
         </nav>
         <ul class="header-list dropdown">
           <li class="dropdown__item">
-            <a class="dropdown__phone" href="tel:+78005558628">+7 800 555-86-28</a>
+            <a class="dropdown__link phone" href="tel:+78005558628">+7 800 555-86-28</a>
           </li>
-          <li class="dropdown__item">
-            <button class="dropdown__search" type="button"></button>
+          <li class="dropdown__item search">
+            <a class="dropdown__link" href="#">
+              <span class="visually-hidden">Поиск</span>
+            </a>
           </li>
-          <li class="dropdown__item">
-            <button class="dropdown__login login" type="button">Вход</button>
+          <li class="dropdown__item login">
+            <a class="dropdown__link" href="#">Вход</a>
           </li>
-          <li class="dropdown__item">
-            <button class="dropdown__basket basket" type="button">Пусто</button>
+          <li class="dropdown__item basket">
+            <a class="dropdown__link" href="#">Пусто</a>
           </li>
         </ul>
       </header>
@@ -48,7 +51,7 @@
                 <h2 class="icecream__name">Нежный пломбир с клубничным джемом</h2>
                 <p class="icecream__description">Натуральное мороженое из свежих сливок и молока с вкуснейшим клубничным
                 джемом – это идеальный десерт для всей семьи. </p>
-                <a class="icecream__order" href="./catalog.html">Заказать</a>
+                <a class="icecream__order common-button" href="./catalog.html">Заказать</a>
                 <!-- В теории тут должна быть ссылка, т.к. по логике она должна вести на страницу каталога -->
               </div>
               <ul class="slider__image image">
@@ -98,17 +101,17 @@
         <section class="main__gifts gift">
           <h3 class="gift__title">Заказывайте мороженое и получайте подарки!</h3>
           <ul class="gift__list gifts">
-            <li class="gifts__item offer offer--raspberry">
-              <h4 class="offer__title">Малинка даром!</h4>
-              <p class="offer__description">При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку
+            <li class="gifts__item raspberry">
+              <h4 class="gifts__title">Малинка даром!</h4>
+              <p class="gifts__description">При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку
               малинового варенья бесплатно.</p>
-              <a class="offer__button" href="#">Хочу подарок</a>
+              <a class="gifts__button common-button" href="#">Хочу подарок</a>
             </li>
-            <li class="gifts__item offer offer--marshmallow">
-              <h4 class="offer__title">Маршмеллоу даром!</h4>
-              <p class="offer__description">При покупке 2 кг пломбира добавим в ваш заказ упаковку нежных зефирок
+            <li class="gifts__item marshmallow">
+              <h4 class="gifts__title">Маршмеллоу даром!</h4>
+              <p class="gifts__description">При покупке 2 кг пломбира добавим в ваш заказ упаковку нежных зефирок
               совершенно бесплатно.</p>
-              <a class="offer__button" href="#">Хочу подарок</a>
+              <a class="gifts__button common-button" href="#">Хочу подарок</a>
             </li>
           </ul>
         </section>
@@ -188,11 +191,11 @@
             <aside class="info__mail mail">
               <div class="mail__container">
                 <p class="mail__description">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого
-              вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+                  вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
               <form class="mail__form send">
                 <label class="send__label" for="email"></label>
                 <input class="send__address" type="email" id="email" placeholder="email@example.com">
-                <button class="send__button" type="button">Отправить</button>
+                <button class="send__button common-button" type="button">Отправить</button>
               </form>
               </div>
             </aside>
@@ -203,43 +206,47 @@
             <div class="delivery__background">
               <h3 class="delivery__title">Доставка любимого мороженого на дом</h3>
               <p class="delivery__description">Хочется полакомиться любимым дессертом, но нет времени съездить в магазин?
-            Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!</p>
+                Закажите доставку мороженого на дом, и курьер привезёт вам вш заказ в течение часа!</p>
             </div>
-            <div class="delivery__form form">
-              <p class="delivery__description">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.</p>
-              <form class="delivery__form record">
-                <label class="record__label" for="date">Дата</label>
-                <input class="record__date" type="date" id="date">
-                <label class="record__label" for="tel">Телефон</label>
+            <form class="delivery__form record">
+              <p class="record__description">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.</p>
+              <div class="record__container box">
+                <div class="box__date">
+                  <label class="record__label" for="date">Дата</label>
+                  <input class="record__date" type="date" id="date">
+                </div>
+                <div class="box__phone">
+                  <label class="record__label" for="tel">Телефон</label>
                 <input class="record__phone"
                   type="tel"
                   id="tel"
                   pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}"
                   placeholder="+7 800 999-00-00"
                   required>
-                <label class="record__label" for="address">Адрес</label>
-                <textarea
-                  class="record__address"
-                  id="address"
-                  name="address"
-                  rows="2"
-                  placeholder="ул. Большая Конюшенная, 19/8"
-                  required
-                ></textarea>
-                <button class="record__button" type="button">Отправить</button>
-              </form>
-            </div>
+                </div>
+              </div>
+              <label class="record__label" for="address">Адрес</label>
+              <textarea
+                class="record__address"
+                id="address"
+                name="address"
+                rows="2"
+                placeholder="ул. Большая Конюшенная, 19/8"
+                required
+              ></textarea>
+              <button class="record__button common-button" type="button">Отправить</button>
+            </form>
           </div>
           <div class="delivery__location location">
             <div class="location-container">
               <p class="location__description">Адрес главного офиса и офлайн-магазина:
                 <br>
-                <span class="location__street">наб. реки Карповки,5 лит П, Санкт-Петербург</span>
+                <span class="location__street main-information">наб. реки Карповки,<br>5 лит П, Санкт-Петербург</span>
               </p>
               <p class="location__description">Для заказов по телефону:</p>
-              <a class="location__description main-phone" href="tel:+78128121212">+7 812 812-12-12</a>
-              <p class="location__description">(с 10 до 20 ежедневно)</p>
-              <button class="location__button" type="button">Форма обратной связи</button>
+              <a class="location__description main-information" href="tel:+78128121212">+7 812 812-12-12</a>
+              <p class="location__description location-time">(с 10 до 20 ежедневно)</p>
+              <button class="location__button common-button" type="button">Форма обратной связи</button>
             </div>
           </div>
         </section>
@@ -271,27 +278,25 @@
             </a>
           </li>
         </ul>
-        <div class="footer__links files">
-          <ul class="files__list">
-            <li class="files__item">
-              <a class="files__link active" href="#">Для поставщиков</a> <!--Будет другой подкласс для изменения CSS-->
-            </li>
-            <li class="files__item">
-              <a class="files__link" href="#">О производстве</a>
-            </li>
-            <li class="files__item">
-              <a class="files__link" href="#">Наши документы</a>
-            </li>
-            <li class="files__item">
-              <a class="files__link" href="#">Экологические стандарты</a>
-            </li>
-          </ul>
-        </div>
+        <ul class="footer__links files">
+          <li class="files__item active">
+            <a class="files__link" href="#">Для поставщиков</a> <!--Будет другой подкласс для изменения CSS-->
+          </li>
+          <li class="files__item">
+            <a class="files__link" href="#">О производстве</a>
+          </li>
+          <li class="files__item">
+            <a class="files__link" href="#">Наши документы</a>
+          </li>
+          <li class="files__item">
+            <a class="files__link" href="#">Экологические стандарты</a>
+          </li>
+        </ul>
         <div class="footer__author author">
           <a href="https://htmlacademy.ru/">
             <img class="author__logo" src="./images/logo/htmlacademy_logo.svg" alt="Html logo">
           </a>
-          <a class="author__description" href="https://htmlacademy.ru/">Сделано в <span>.html academy</span> © 2021</a>
+          <a class="author__description" href="https://htmlacademy.ru/">Сделано в <span class="author__html">.html academy</span> © 2021</a>
         </div>
       </footer>
     </div>

@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Gllacy Shop</title>
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
@@ -13,8 +14,8 @@
             <img class="logo__img" src="./images/logo/glacy_logo.svg" width="137" height="56" alt="Gllacy logo">
           </a>
           <ul class="navigation__list navbar">
-            <li class="navbar__item">
-              <a class="navbar__link navbar__link--current" href="./catalog.html">Каталог</a>
+            <li class="navbar__item--current">
+              <a class="navbar__link" href="./catalog.html">Каталог</a>
             </li>
             <li class="navbar__item">
               <a class="navbar__link" href="#">Доставка и оплата</a>
@@ -26,22 +27,24 @@
         </nav>
         <ul class="header-list dropdown">
           <li class="dropdown__item">
-            <a class="dropdown__phone" href="tel:+78005558628">+7 800 555-86-28</a>
+            <a class="dropdown__link phone" href="tel:+78005558628">+7 800 555-86-28</a>
           </li>
-          <li class="dropdown__item">
-            <button class="dropdown__search" type="button"></button>
+          <li class="dropdown__item search">
+            <a class="dropdown__link" href="#">
+              <span class="visually-hidden">Поиск</span>
+            </a>
           </li>
-          <li class="dropdown__item">
-            <button class="dropdown__login login" type="button">Вход</button>
+          <li class="dropdown__item login">
+            <a class="dropdown__link" href="#">Вход</a>
           </li>
-          <li class="dropdown__item">
-            <button class="dropdown__basket basket" type="button">2 товара</button>
+          <li class="dropdown__item basket">
+            <a class="dropdown__link" href="#">2 товара</a>
           </li>
         </ul>
       </header>
       <main class="main-container catalog">
         <ul class="catalog__list breadcrumb">
-          <li class="breadcrumb__item"> 
+          <li class="breadcrumb__item">
             <a class="breadcrumb__link" href="./index.html">Главное</a>
           </li>
           <li class="breadcrumb__item">
@@ -52,49 +55,52 @@
           </li>
         </ul>
         <h1 class="catalog__title">Сливочное мороженое</h1>
-        <div class="catalog__container container">
-          <form class="container__form options" action="https://echo.htmlacademy.ru/" method="get">
-            <select class="options__sort" aria-label="Сортировка">
-              <option class="options__populatiry" value="по популярности">по популярности</option>
-            </select>
-            <div class="options__rang">
-              <label class="min-price" for="price-1">Цена: 100₽-500₽
-                <input class="price-1" type="range" id="price-1" name="min-price" value="100">
-              </label>
-              <label class="max-price" for="price-2">
-                <input class="price-2" type="range" id="price-2" name="max-price"  value="500">
-              </label>
+        <div class="catalog__container box">
+          <form class="box__form options" action="https://echo.htmlacademy.ru/" method="get">
+            <div class="options__box">
+              <select class="options__sort" aria-label="Сортировка">
+                <option class="options__populatiry" value="по популярности">по популярности</option>
+              </select>
+              <div class="options__rang">
+                <label class="min-price" for="price-1">Цена: 100₽-500₽
+                  <input class="price-1" type="range" id="price-1" name="min-price" value="100">
+                </label>
+                <label class="max-price" for="price-2">
+                  <input class="price-2" type="range" id="price-2" name="max-price"  value="500">
+                </label>
+              </div>
+              <fieldset class="options__fat percent">
+                <legend class="cpercent-title">Жирность:</legend>
+                <ul class="percent-list">
+                  <li class="percent-item">
+                    <label class="control">
+                      <input class="control-input" type="radio" name="product-group" value="shaving-supplies">
+                      0%
+                    </label>
+                  </li>
+                  <li class="percent-item">
+                    <label class="control">
+                      <input class="control-input" type="radio" name="product-group" value="care-products" checked>
+                      до 10%
+                    </label>
+                  </li>
+                  <li class="percent-item">
+                    <label class="control">
+                      <input class="control-input" type="radio" name="product-group" value="accessories">
+                      до 30%
+                    </label>
+                  </li>
+                  <li class="percent-item">
+                    <label class="control">
+                      <input class="control-input" type="radio" name="product-group" value="accessories">
+                      выше 30%
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
             </div>
-            <fieldset class="options__fat percent">
-              <legend class="cpercent-title">Жирность:</legend>
-              <ul class="percent-list">
-                <li class="percent-item">
-                  <label class="control">
-                    <input class="control-input" type="radio" name="product-group" value="shaving-supplies">
-                    0%
-                  </label>
-                </li>
-                <li class="percent-item">
-                  <label class="control">
-                    <input class="control-input" type="radio" name="product-group" value="care-products" checked>
-                    до 10%
-                  </label>
-                </li>
-                <li class="percent-item">
-                  <label class="control">
-                    <input class="control-input" type="radio" name="product-group" value="accessories">
-                    до 30%
-                  </label>
-                </li>
-                <li class="percent-item">
-                  <label class="control">
-                    <input class="control-input" type="radio" name="product-group" value="accessories">
-                    выше 30%
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset class="options__supplement supplement">
+            <div class="box__supplement">
+              <fieldset class="options__supplement supplement">
               <legend class="supplement__label">Наполнители</legend>
               <ul class="supplement__list">
                 <li class="supplement-item">
@@ -128,8 +134,9 @@
                   </label>
                 </li>
               </ul>
-            </fieldset>
-            <button class="options__button" type="button">Применить</button>
+              </fieldset>
+              <button class="options__button" type="button">Применить</button>
+            </div>
           </form>
           <ul class="catalog__tastes tastes">
             <li class="tastes__item taste">
@@ -266,14 +273,14 @@
             </li>
           </ul>
           <div class="catalog__pagination pagination">
-            <button class="pagination__view" type="button">Показать еще</button>
+            <button class="pagination__view common-button" type="button">Показать еще</button>
             <ul class="pagination__list">
               <li class="pagination__item">
               <a class="pagination__link" href="#">
                 <img src="./images/icon/arrow_left_icon.svg" width="16" height="16" alt="Назад">
               </a>
               </li>
-              <li class="pagination__item">
+              <li class="pagination__item active-link">
                 <a class="pagination__link" href="#">1</a>
               </li>
               <li class="pagination__item">
@@ -282,7 +289,7 @@
               <li class="pagination__item">
                 <a class="pagination__link" href="#">3</a>
               </li>
-              <li class="pagination__item"> 
+              <li class="pagination__item">
                 <a class="pagination__link" href="#">4</a>
               </li>
               <li class="pagination__item">
@@ -325,27 +332,25 @@
             </a>
           </li>
         </ul>
-        <div class="footer__links files">
-          <ul class="files__list">
-            <li class="files__item">
-              <a class="files__link active" href="#">Для поставщиков</a> <!--Будет другой подкласс для изменения CSS-->
-            </li>
-            <li class="files__item">
-              <a class="files__link" href="#">О производстве</a> 
-            </li>
-            <li class="files__item">
-              <a class="files__link" href="#">Наши документы</a> 
-            </li>
-            <li class="files__item">
-              <a class="files__link" href="#">Экологические стандарты</a> 
-            </li>
-          </ul>
-        </div>
+        <ul class="files__links files">
+          <li class="files__item active">
+            <a class="files__link" href="#">Для поставщиков</a> <!--Будет другой подкласс для изменения CSS-->
+          </li>
+          <li class="files__item">
+            <a class="files__link" href="#">О производстве</a>
+          </li>
+          <li class="files__item">
+            <a class="files__link" href="#">Наши документы</a>
+          </li>
+          <li class="files__item">
+            <a class="files__link" href="#">Экологические стандарты</a>
+          </li>
+        </ul>
         <div class="footer__author author">
           <a href="https://htmlacademy.ru/">
             <img class="author__logo" src="./images/logo/htmlacademy_logo.svg" alt="Html logo">
           </a>
-          <a class="author__description" href="https://htmlacademy.ru/">Сделано в <span>.html academy</span> © 2021</a>
+          <a class="author__description" href="https://htmlacademy.ru/">Сделано в <span class="author__html">.html academy</span> © 2021</a>
         </div>
       </footer>
     </div>

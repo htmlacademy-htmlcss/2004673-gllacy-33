@@ -43,9 +43,17 @@ body {
   overflow: auto;
 }
 
+.body__color_yellow {
+  background: #fcc850;
+}
+
+.body__color_blue {
+  background: #69a9f6;
+}
+
 .container {
   margin: 0 auto;
-  max-width: 1170px;
+  width: 1170px;
   padding: 0 30px;
   box-sizing: content-box;
 }
@@ -210,13 +218,18 @@ body {
 
 .search .dropdown__link {
   border-radius: 50%;
-  padding: 9px;
+  padding: 7px;
   background-color: rgba(252, 252, 252, 0.3);
 }
 
-.login .dropdown__link,
+.login .dropdown__link {
+  padding: 6px 18px 6px 16px;
+  border-radius: 26px;
+  background-color: rgba(252, 252, 252, 0.3);
+}
+
 .basket .dropdown__link {
-  padding: 7px 18px 7px 17px;
+  padding: 6px 16px 6px 16px;
   border-radius: 26px;
   background-color: rgba(252, 252, 252, 0.3);
 }
@@ -232,13 +245,15 @@ body {
 }
 
 .navbar__link:focus {
-  box-shadow: 0 0 0 0 rgba(252, 252, 252, 0.5), 0 0 0 2px #2D3440;
-  outline: none;
+  background-color: 0 0 0 0 rgba(252, 252, 252, 0.5);
+  border-radius: 26px;
+  outline: 2px solid #2d3440;
 }
 
-.navbar__link:active {
+.navbar__link:active { 
   background-color: rgb(252, 252, 252);
-  border: none;
+  border-radius: 26px;
+  outline: none;
 }
 
 .search .dropdown__link:hover,
@@ -250,15 +265,17 @@ body {
 .search .dropdown__link:focus,
 .login .dropdown__link:focus,
 .basket .dropdown__link:focus{
-  box-shadow: 0 0 0 0 rgba(252, 252, 252, 0.5), 0 0 0 2px #2D3440; 
-  outline: none;
+  background-color: 0 0 0 0 rgba(252, 252, 252, 0.5);
+  border-radius: 26px;
+  outline: 2px solid #2d3440;
 }
 
 .search .dropdown__link:active,
 .login .dropdown__link:active,
 .basket .dropdown__link:active{
   background-color: rgb(252, 252, 252);
-  border: none;
+  border-radius: 26px;
+  outline: none;
 }
 
 
@@ -446,29 +463,28 @@ body {
   margin-right: 8px;
 }
 
-.dots {
+.dots__item {
   display: block;
   min-height: 12px;
   min-width: 12px;
-  background-image: url(../images/icon/dots_icon.svg);
-  background-repeat: no-repeat;
+  background-color: rgba(252, 252, 252,0.3);
+  border-radius: 100%;
 }
 
-.dots:hover {
+.dots__item--current {
+  background-color: #fcfcfc;
+}
+
+.dots__item:hover {
   border: 1px solid #fcfcfc;
   background: rgba(252, 252, 252, 0.3);
   border-radius: 100%;
 }
 
-.dots:focus {
-  border: 1px solid #2D3440;
+.dots__item:focus {
+  outline: 1px solid #2D3440;
   background: rgba(252, 252, 252, 0.3);
   border-radius: 100%;
-  outline: none;
-}
-
-.dots__item:not(:first-child) {
-  opacity: 0.3;
 }
 
 .socials {
@@ -498,7 +514,7 @@ body {
 
 .socials__link svg:hover{
   fill:#fcfcfc;
-  background: radial-gradient(circle, rgba(45,52,64,1) 0%, rgba(45,52,64,1) 70%, rgba(252,252,252,1) 70%);
+  background: radial-gradient(circle, rgba(45,52,64,1) 0%, rgba(45,52,64,1) 65%, rgba(252,252,252,1) 65%);
   background-clip: content-box;
 }
 
@@ -846,7 +862,7 @@ body {
   font-size: 16px;
   line-height: 20px;
   color: #b9b9b9;
-  margin-right: 24px;
+  margin-right: 20px;
 }
 
 .send__button {
@@ -855,6 +871,7 @@ body {
   text-align: center;
   background: #ff2f64;
   box-shadow: 0 0 0 4px rgba(255, 47, 100, 0.3), 0 4px 12px rgba(45, 52, 64, 0.1);
+  padding: 12px 32px;
 }
 
 /*delivery*/
@@ -966,6 +983,7 @@ body {
   text-align: center;
   background: #ff2f64;
   box-shadow: 0 0 0 4px rgba(255, 47, 100, 0.3), 0 4px 12px rgba(45, 52, 64, 0.1);
+  padding: 12px 32px;
 }
 
 /*location*/

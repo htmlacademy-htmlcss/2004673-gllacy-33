@@ -15,7 +15,7 @@
           </a>
           <ul class="navigation__list navbar">
             <li class="navbar__item--current">
-              <a class="navbar__link" href="./catalog.html">Каталог</a>
+              <a class="navbar__link">Каталог</a>
             </li>
             <li class="navbar__item">
               <a class="navbar__link" href="#">Доставка и оплата</a>
@@ -80,23 +80,17 @@
               <div class="cost__legend">
                 <legend class="cost__title">Цена:</legend>
                 <div class="cost__diapason diapason">
-                  <label for="min-cost" class="diapason__min">
-                    <input type="number" name="min-cost" value="100" class="diapason__input">
-                    &#8381; - 
-                  </label>
-                  <label for="max-cost" class="diapason__max">
-                    <input type="number" name="max-cost" value="500"class="diapason__input">
-                    &#8381;
-                  </label>
+                  <span id="min-cost" class="diapason__min">100₽ –</span>
+                  <span id="max-cost" class="diapason__max"> 500₽</span>
                 </div>
               </div>
               <div class="cost__container">
                 <div class="cost__range">
                   <div class="cost__bar">
-                    <button class="range-toggle toggle-min">
+                    <button class="range-toggle toggle-min" type="button">
                       <span class="visually-hidden">Минимальная цена</span>
                     </button>
-                    <button class="range-toggle toggle-max">
+                    <button class="range-toggle toggle-max" type="button">
                       <span class="visually-hidden">Максимальная цена</span>
                     </button>
                   </div>
@@ -138,31 +132,31 @@
                 <ul class="supplement__list">
                   <li class="supplement-item">
                     <label class="control">
-                      <input class="control-input" type="checkbox" name="bed-head-for-men">
-                      шоколадные
+                      <input class="control-input" type="checkbox" name="fillers[]" value="chocolate" checked>
+                       шоколадные
                     </label>
                   </li>
                   <li class="supplement-item">
                     <label class="control">
-                      <input class="control-input" type="checkbox" name="homme-deep-cleansing-cool" checked>
+                      <input class="control-input" type="checkbox" name="fillers[]" value="sugar" checked>
                       сахарные посыпки
                     </label>
                   </li>
                   <li class="supplement-item">
                     <label class="control">
-                      <input class="control-input" type="checkbox" name="so-intense" checked>
-                      фрукты
+                      <input class="control-input" type="checkbox" name="fillers[]" value="fruits">
+                     фрукты
                     </label>
                   </li>
                   <li class="supplement-item">
                     <label class="control">
-                      <input class="control-input" type="checkbox" name="sprekenhus">
+                      <input class="control-input" type="checkbox" name="fillers[]" value="syrupsджем">
                       сиропы
                     </label>
                   </li>
                   <li class="supplement-item">
                     <label class="control">
-                      <input class="control-input" type="checkbox" name="firm-storе">
+                      <input class="control-input" type="checkbox" name="fillers[]" value="jams">
                       джемы
                     </label>
                   </li>
@@ -344,10 +338,10 @@
           <div class="catalog__pagination pagination">
             <a class="pagination__view common-button">Показать еще</a>
             <ul class="pagination__list">
-              <li class="pagination__item">
-              <a class="pagination__link" href="#">
-                <img src="./images/icon/arrow_left_icon.svg" width="16" height="16" alt="Назад">
-              </a>
+              <li class="pagination__item back-link">
+                <a class="pagination__link" href="#">
+                  <img src="./images/icon/arrow_left_icon.svg" width="16" height="16" alt="Назад">
+                </a>
               </li>
               <li class="pagination__item active-link">
                 <a class="pagination__link" href="#">1</a>
@@ -364,7 +358,7 @@
               <li class="pagination__item">
                 <a class="pagination__link" href="#">5</a>
               </li>
-              <li class="pagination__item">
+              <li class="pagination__item forward-link">
                 <a class="pagination__link" href="#">
                   <img src="./images/icon/arrow_right_icon.svg" width="16" height="16" alt="Вперед">
                 </a>

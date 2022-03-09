@@ -183,7 +183,7 @@ body {
 }
 
 .dropdown__item:not(:first-child) {
-  margin-right: 20px;
+  margin-right: 16px;
 }
 
 .dropdown__item:last-child {
@@ -239,20 +239,19 @@ body {
   margin-right: 8px;
 }
 
-.navbar__link:hover {
+.navbar__link:hover:has([href]) {
   background-color: rgba(252, 252, 252, 0.5);
   border-radius: 26px;
 }
 
-.navbar__link:focus {
+.navbar__link:focus:has([href]) {
   background-color: 0 0 0 0 rgba(252, 252, 252, 0.5);
-  padding: 6px 14px;
   border-radius: 26px;
   outline: 2px solid #2d3440;
   outline-offset: -2px;
 }
 
-.navbar__link:active { 
+.navbar__link:active:has([href]) { 
   background-color: rgb(252, 252, 252);
   border-radius: 26px;
   outline: none;
@@ -624,6 +623,9 @@ body {
   color: #000000;
   list-style-type: none;
   text-align: center;
+  min-height: 281px;
+  min-width: 270px;
+  overflow: hidden;
 }
 
 .tastes__item::before {
@@ -637,6 +639,8 @@ body {
   right: 0;
   bottom: 0;
   z-index: -1;
+  min-width: 270px;
+  min-height: 281px;
 }
 
 .taste__img {
@@ -1213,14 +1217,12 @@ hr {
   padding: 8px 16px;
 }
 
-.options__sort:hover,
-.cost__container:hover {
+.options__sort:hover {
   background: rgba(252,252,252,0.5);
   border-radius: 20px;
 }
 
-.options__sort:focus,
-.cost__container:focus {
+.options__sort:focus {
   background: rgba(252,252,252,0.4);
   border-radius: 20px;
   outline: 1px solid #fcfcfc;
@@ -1353,12 +1355,12 @@ hr {
 }
 
 .options__button {
-  margin: 27px 0 0 -21px;
+  margin: 28px 0 0 -24px;
   background: rgba(252, 252, 252, 0.3);
   border: 2px solid #fcfcfc;
   border-radius: 20px;
-  width: 187px;
-  height: 38px;
+  width: 190px;
+  height: 40px;
   font-weight: bold;
   font-size: 14px;
   line-height: 20px;
@@ -1390,7 +1392,7 @@ hr {
   font-weight: 900;
   font-size: 32px;
   line-height: 46px;
-  margin: 16px 0 38px 0;
+  margin: 15px 0 38px 0;
 }
 
 .container__form {
@@ -1408,7 +1410,7 @@ hr {
   grid-template-columns: 270px 270px 270px 270px;
   gap: 30px;
   row-gap: 40px;
-  margin: 48px auto 16px auto;
+  margin: 49px auto 16px auto;
 }
 
 .catalog__pagination {
@@ -1426,13 +1428,13 @@ hr {
   box-shadow: 0 0 0 4px rgba(252, 252, 252, 0.4) ,0 4px 12px rgba(45, 52, 64, 0.1);
   max-width: 179px;
   font-family: "Inter", sans-serif;
-  margin-right: 305px;
+  margin-right: 293px;
   padding: 12px 32px;
 }
 
 .pagination__list {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .pagination__link {
@@ -1456,7 +1458,7 @@ hr {
 
 .back-link{
   opacity: 0.2;
-  margin-right: 9px;
+  padding-right: 12px;
 }
 
 .forward-link {

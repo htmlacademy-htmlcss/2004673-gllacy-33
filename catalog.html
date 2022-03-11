@@ -37,6 +37,13 @@
               </svg>
               <span class="visually-hidden">Поиск</span>
             </a>
+            <div class="popover popover-search-cart">
+              <div class="popover-content">
+                <form action="">
+                  <input class="form-input" type="text" id="text" placeholder="Поиск по сайту">
+                </form>
+              </div>
+            </div>
           </li>
           <li class="dropdown__item login">
             <a class="dropdown__link" href="#">
@@ -45,14 +52,69 @@
               </svg>
               Вход
             </a>
+            <div class="popover popover-login-cart">
+              <div class="popover-content">
+                <h2 class="popover-title">Личный кабинет</h2>
+                <form class="popover-form" action="https://echo.htmlacademy.ru" method="get">
+                  <div class="popover-form_login">
+                    <label for="text"></label>
+                    <input class="form-input" type="text" id="text" placeholder="email@example.com">
+                  </div>
+                  <div class="popover-form_password">
+                    <label for="text"></label>
+                    <input class="form-input" type="text" id="text" placeholder="Пароль">
+                </form>
+                <div class="popover-enter">
+                  <button class="additional-button" type="submit">Войти</button>
+                  <div class="popover-links">
+                    <a href="#">Забыли пароль?</a>
+                    <a href="#">Регистрация</a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </li>
           <li class="dropdown__item basket">
             <a class="dropdown__link" href="#">
-              <svg class="dropdown__icon" aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.31254 0.489586C0.944351 0.489586 0.645874 0.788063 0.645874 1.15625C0.645874 1.52444 0.944351 1.82292 1.31254 1.82292H3.37353L3.91319 4.5192C3.91612 4.538 3.91985 4.55654 3.92432 4.57479L5.01308 10.0146L5.0132 10.0151C5.10338 10.4685 5.35008 10.8757 5.71016 11.1656C6.06854 11.4541 6.51652 11.608 6.97639 11.6009H13.3011C13.761 11.608 14.209 11.4541 14.5673 11.1656C14.9276 10.8756 15.1743 10.4681 15.2644 10.0146L15.2644 10.0146L15.2654 10.0096L16.3084 4.54045C16.3456 4.34528 16.2938 4.14368 16.1672 3.9906C16.0405 3.83751 15.8522 3.7489 15.6535 3.7489H5.11879L4.57369 1.02541C4.51133 0.713843 4.23774 0.489586 3.91999 0.489586H1.31254ZM6.32068 9.75385L5.38566 5.08223H14.8477L13.9562 9.75686C13.9268 9.90268 13.8472 10.0336 13.7313 10.1269C13.6148 10.2207 13.4691 10.2705 13.3196 10.2676L13.3196 10.2675H13.3068H6.9707V10.2674L6.95793 10.2676C6.80844 10.2705 6.66271 10.2207 6.54624 10.1269C6.42978 10.0332 6.35 9.90146 6.32087 9.75481L6.32068 9.75385ZM5.21043 14.1936C5.21043 13.4657 5.80055 12.8755 6.5285 12.8755C7.25644 12.8755 7.84656 13.4657 7.84656 14.1936C7.84656 14.9216 7.25644 15.5117 6.5285 15.5117C5.80055 15.5117 5.21043 14.9216 5.21043 14.1936ZM12.3804 14.1936C12.3804 13.4657 12.9705 12.8755 13.6985 12.8755C14.4264 12.8755 15.0166 13.4657 15.0166 14.1936C15.0166 14.9216 14.4264 15.5117 13.6985 15.5117C12.9705 15.5117 12.3804 14.9216 12.3804 14.1936Z" fill="#2D3440"/>
+              <svg class="dropdown__icon catalog-backet" aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 17 16" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.31254 0.489586C0.944351 0.489586 0.645874 0.788063 0.645874 1.15625C0.645874 1.52444 0.944351 1.82292 1.31254 1.82292H3.37353L3.91319 4.5192C3.91612 4.538 3.91985 4.55654 3.92432 4.57479L5.01308 10.0146L5.0132 10.0151C5.10338 10.4685 5.35008 10.8757 5.71016 11.1656C6.06854 11.4541 6.51652 11.608 6.97639 11.6009H13.3011C13.761 11.608 14.209 11.4541 14.5673 11.1656C14.9276 10.8756 15.1743 10.4681 15.2644 10.0146L15.2644 10.0146L15.2654 10.0096L16.3084 4.54045C16.3456 4.34528 16.2938 4.14368 16.1672 3.9906C16.0405 3.83751 15.8522 3.7489 15.6535 3.7489H5.11879L4.57369 1.02541C4.51133 0.713843 4.23774 0.489586 3.91999 0.489586H1.31254ZM6.32068 9.75385L5.38566 5.08223H14.8477L13.9562 9.75686C13.9268 9.90268 13.8472 10.0336 13.7313 10.1269C13.6148 10.2207 13.4691 10.2705 13.3196 10.2676L13.3196 10.2675H13.3068H6.9707V10.2674L6.95793 10.2676C6.80844 10.2705 6.66271 10.2207 6.54624 10.1269C6.42978 10.0332 6.35 9.90146 6.32087 9.75481L6.32068 9.75385ZM5.21043 14.1936C5.21043 13.4657 5.80055 12.8755 6.5285 12.8755C7.25644 12.8755 7.84656 13.4657 7.84656 14.1936C7.84656 14.9216 7.25644 15.5117 6.5285 15.5117C5.80055 15.5117 5.21043 14.9216 5.21043 14.1936ZM12.3804 14.1936C12.3804 13.4657 12.9705 12.8755 13.6985 12.8755C14.4264 12.8755 15.0166 13.4657 15.0166 14.1936C15.0166 14.9216 14.4264 15.5117 13.6985 15.5117C12.9705 15.5117 12.3804 14.9216 12.3804 14.1936Z"/>
               </svg>
               2 товара
             </a>
+            <div class="popover popover-catalog-cart_basket">
+              <div class="popover-content">
+                <h2 class="popover-title">Корзина</h2>
+                <ul class="cart-items-list">
+                  <li class="cart-item">
+                    <img src="../2004673-gllacy-33/images/catalog/raspberry.jpg" alt="#">
+                    <div class="cart-description">
+                      <h3 class="cart-name">Малинка</h3>
+                      <p class="cart-text">1 кг х 310 ₽</p>
+                    </div>
+                    <p class="cart-price">310 ₽</p>
+                    <button class="cart-delete-button">
+                      <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.803 4.138a.667.667 0 1 0-.943-.943L8 7.056l-3.862-3.86a.667.667 0 1 0-.943.942L7.056 8l-3.86 3.861a.667.667 0 1 0 .942.943L8 8.942l3.861 3.861a.667.667 0 1 0 .943-.943L8.942 8l3.861-3.862z" fill="#2D3440"/></svg>
+                    </button>
+                  </li>
+                  <li class="cart-item">
+                    <img src="../2004673-gllacy-33/images/catalog/bubble.jpg" alt="#">
+                    <div class="cart-description">
+                      <h3 class="cart-name">Бабл-гам</h3>
+                      <p class="cart-text">1,5 кг х 320 ₽</p>
+                    </div>
+                    <p class="cart-price">480 ₽</p>
+                    <button class="cart-delete-button">
+                      <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.803 4.138a.667.667 0 1 0-.943-.943L8 7.056l-3.862-3.86a.667.667 0 1 0-.943.942L7.056 8l-3.86 3.861a.667.667 0 1 0 .942.943L8 8.942l3.861 3.861a.667.667 0 1 0 .943-.943L8.942 8l3.861-3.862z" fill="#2D3440"/></svg>
+                    </button>
+                  </li>
+                </ul>
+                <hr>
+                <div class="popover_total">
+                  <button class="popover__button additional-button" type="submit">Оформить заказ</button>
+                  <p class="cart-price">Итого: 790 ₽</p>
+                </div>
+              </div>
+            </div>
           </li>
         </ul>
       </header>
@@ -72,8 +134,8 @@
         <div class="catalog__container box">
           <form class="box__form options" action="https://echo.htmlacademy.ru/" method="get">
             <div class="options__box">
-              <label class="options__title" for="sorting-select">Сортировка:</label>
-              <select class="options__sort" id="sorting-select">
+              <label class="options__title" for="sorting-select" >Сортировка:</label>
+              <select class="options__sort" id="sorting-select" name="Сортировка">
                 <option class="options__populatiry" value="по популярности">по популярности</option>
               </select>
             </div>
@@ -81,8 +143,16 @@
               <div class="cost__legend">
                 <legend class="cost__title">Цена:</legend>
                 <div class="cost__diapason diapason">
-                  <span id="min-cost" class="diapason__min">100₽ –</span>
-                  <span id="max-cost" class="diapason__max"> 500₽</span>
+                  <span id="min-cost" class="diapason__min">
+                    <label class="min-price" for="price-1">
+                      <input class="price-2" type="range" id="price-1" name="min-price"  value="100">
+                    </label>
+                    100</span>₽ – 
+                  <span id="max-cost" class="diapason__max">
+                    <label class="max-price" for="price-2">
+                      <input class="price-2" type="range" id="price-2" name="max-price"  value="500">
+                    </label>
+                    500</span>₽
                 </div>
               </div>
               <div class="cost__container">
@@ -103,26 +173,30 @@
               <ul class="percent-list">
                 <li class="percent-item">
                   <label class="control">
-                    <input class="control-input" type="radio" name="product-group" value="shaving-supplies">
-                    0%
+                    <input class="visually-hidden control-input" type="radio" name="product-group" value="shaving-supplies">
+                    <span class="control-mark"></span>
+                    <span class="control__text">0%</span> 
                   </label>
                 </li>
                 <li class="percent-item">
                   <label class="control">
-                    <input class="control-input" type="radio" name="product-group" value="care-products" checked>
-                    до 10%
+                    <input class="visually-hidden control-input" type="radio" name="product-group" value="care-products" checked>
+                    <span class="control-mark"></span>
+                    <span class="control__text">до 10%</span> 
                   </label>
                 </li>
                 <li class="percent-item">
                   <label class="control">
-                    <input class="control-input" type="radio" name="product-group" value="accessories">
-                    до 30%
+                    <input class="visually-hidden control-input" type="radio" name="product-group" value="accessories">
+                    <span class="control-mark"></span>
+                    <span class="control__text">до 30%</span> 
                   </label>
                 </li>
                 <li class="percent-item">
                   <label class="control">
-                    <input class="control-input" type="radio" name="product-group" value="accessories">
-                    выше 30%
+                    <input class="visually-hidden control-input" type="radio" name="product-group" value="accessories">
+                    <span class="control-mark"></span>
+                    <span class="control__text">выше 30%</span> 
                   </label>
                 </li>
               </ul>
@@ -133,32 +207,37 @@
                 <ul class="supplement__list">
                   <li class="supplement-item">
                     <label class="control">
-                      <input class="control-input" type="checkbox" name="fillers[]" value="chocolate" checked>
-                       шоколадные
+                      <input class="visually-hidden control-input" type="checkbox" name="fillers[]" value="chocolate" checked>
+                      <span class="control-mark"></span>
+                      <span class="control__text">шоколадные</span> 
                     </label>
                   </li>
                   <li class="supplement-item">
                     <label class="control">
-                      <input class="control-input" type="checkbox" name="fillers[]" value="sugar" checked>
-                      сахарные посыпки
+                      <input class="visually-hidden control-input" type="checkbox" name="fillers[]" value="sugar" checked>
+                      <span class="control-mark"></span>
+                      <span class="control__text">сахарные посыпки</span>
                     </label>
                   </li>
                   <li class="supplement-item">
                     <label class="control">
-                      <input class="control-input" type="checkbox" name="fillers[]" value="fruits">
-                     фрукты
+                      <input class="visually-hidden control-input" type="checkbox" name="fillers[]" value="fruits">
+                      <span class="control-mark"></span>
+                      <span class="control__text">фрукты</span>
                     </label>
                   </li>
                   <li class="supplement-item">
                     <label class="control">
-                      <input class="control-input" type="checkbox" name="fillers[]" value="syrupsджем">
-                      сиропы
+                      <input class="visually-hidden control-input" type="checkbox" name="fillers[]" value="syrups">
+                      <span class="control-mark"></span>
+                      <span class="control__text">сиропы</span>
                     </label>
                   </li>
                   <li class="supplement-item">
                     <label class="control">
-                      <input class="control-input" type="checkbox" name="fillers[]" value="jams">
-                      джемы
+                      <input class="visually-hidden control-input" type="checkbox" name="fillers[]" value="jams">
+                      <span class="control-mark"></span>
+                      <span class="control__text">джемы</span>
                     </label>
                   </li>
                 </ul>

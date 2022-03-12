@@ -37,10 +37,11 @@
               </svg>
               <span class="visually-hidden">Поиск</span>
             </a>
-            <div class="popover popover-search-cart">
+            <div class="popover popover-search-cart popover-close">
               <div class="popover-content">
                 <form action="https://echo.htmlacademy.ru" method="get">
-                  <input class="form-input" type="text" id="text" placeholder="Поиск по сайту">
+                  <label class="visually-hidden" for="text">Поиск</label>
+                  <input class="form-input" type="text" id="text" name="search" placeholder="Поиск по сайту">
                 </form>
               </div>
             </div>
@@ -52,26 +53,26 @@
               </svg>
               Вход 
             </a>
-            <div class="popover popover-login-cart">
+            <div class="popover popover-login-cart popover-close">
               <div class="popover-content">
                 <h2 class="popover-title">Личный кабинет</h2>
-                <form class="popover-form" action="https://echo.htmlacademy.ru" method="get">
+                <form class="popover-form" action="https://echo.htmlacademy.ru" method="post">
                   <div class="popover-form_login">
-                    <label for="text"></label>
-                    <input class="form-input" type="text" id="text" placeholder="email@example.com">
+                    <label class="visually-hidden" for="text">Электронная почта</label>
+                    <input class="form-input" type="email" id="email" name="email" placeholder="email@example.com" required>
                   </div>
                   <div class="popover-form_password">
-                    <label for="text"></label>
-                    <input class="form-input" type="text" id="text" placeholder="Пароль">
+                    <label class="visually-hidden" for="text">Пароль</label>
+                    <input class="form-input" type="password" id="text" placeholder="Пароль" required>
+                  </div>
+                  <div class="popover-enter">
+                    <button class="additional-button" type="submit">Войти</button>
+                    <div>
+                      <a href="#">Забыли пароль?</a>
+                      <a href="#">Регистрация</a>
+                    </div>
                   </div>
                 </form>
-                <div class="popover-enter">
-                  <button class="additional-button" type="submit">Войти</button>
-                  <div>
-                    <a href="#">Забыли пароль?</a>
-                    <a href="#">Регистрация</a>
-                  </div>
-                </div>
               </div>
             </div>
           </li>
@@ -82,7 +83,7 @@
               </svg>
               Пусто
             </a>
-            <div class="popover popover-index-cart_basket">
+            <div class="popover popover-index-cart_basket popover-close">
               <div class="popover-content">
                 <h2 class="popover-title">Ваша корзина пока пуста</h2>
               </div>
@@ -276,8 +277,8 @@
                 <p class="mail__description">Подпишитесь на нашу сладкую рассылку и будьте всегда<br>в курсе всего самого
                   вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
               <form class="mail__form send" action="https://echo.htmlacademy.ru" method="get">
-                <label class="send__label" for="email"></label>
-                <input class="send__address form-input" type="email" id="email" placeholder="email@example.com">
+                <label class="visually-hidden send__label" for="email">Электронная почта</label>
+                <input class="send__address form-input" type="email" id="email" name="email" placeholder="email@example.com" required>
                 <button class="send__button additional-button" type="submit">Отправить</button>
               </form>
               </div>
@@ -305,7 +306,7 @@
                       <span class="tooltip-text tooltip-date" role="tooltip" id="tooltip-label">Тултип</span>
                     </span> 
                   </div>
-                  <input class="record__date form-input" type="date" id="date">
+                  <input class="record__date form-input" type="date" id="date" required>
                 </div>
                 <div class="box__phone">
                   <label class="form__label" for="tel">Телефон</label>
@@ -313,7 +314,7 @@
                     type="tel"
                     id="tel"
                     pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}"
-                    placeholder="+7 800 999-00-00">
+                    placeholder="+7 800 999-00-00" required>
                 </div>
                 <div class="box__address">
                   <div class="tooltip__container">
@@ -330,7 +331,7 @@
                     id="address"
                     name="address"
                     rows="2"
-                    placeholder="ул. Большая Конюшенная, 19/8">
+                    placeholder="ул. Большая Конюшенная, 19/8" required>
                 </div>
                 <button class="form__button additional-button" type="submit">Отправить</button>
               </form>
@@ -400,23 +401,22 @@
       </footer>
       <div class="modal_container modal-container-close">
         <div class="modal">
-          <button class="modal-close-button">
+          <button class="modal-close-button" type="button">
             <span class="visually-hidden">Закрыть</span>
           </button>
           <section class="modal__form-box">
             <h2 class="modal_title">Мы обязательно ответим вам!</h2>
-            <form class="modal__form" action="">
+            <form class="modal__form" action="https://echo.htmlacademy.ru" method="get">
               <div class="modal__name name">
-                <label class="name__label" for="name"></label>
-                <input class="name__text form-input" type="text" id="name" placeholder="Имя и фамилия" required>
+                <label class="visually-hidden name__label" for="name">Имя и фамилия</label>
+                <input class="name__text form-input" type="text" id="name" placeholder="Имя и фамилия">
               </div>
               <div class="modal__mail mail">
-                <label class="mail__label" for="email"></label>
-                <input class="mail__address form-input" type="email" id="email" placeholder="email@example.com">
+                <label class="visually-hidden mail__label" for="email">Электронная почта</label>
+                <input class="mail__address form-input" type="email" id="email" name="email" placeholder="email@example.com">
               </div>
               <div class="modal__comment comment">
-                <label class="comment__label" for="name"></label>
-                <input class="comment__text form-input" type="text" id="name" placeholder="В свободной форме" required>
+                <textarea class="comment__text form-input" name="text" placeholder="В свободной форме"></textarea>
               </div>
               <button class="modal__button additional-button" type="submit">Отправить</button>
             </form>

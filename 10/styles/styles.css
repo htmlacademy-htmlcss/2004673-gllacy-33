@@ -204,7 +204,7 @@ body {
   padding: 24px 16px;
   background-color: #fcfcfc;
   border-radius: 4px;
-  
+  display: block;
 }
 
 .popover-login-cart {
@@ -214,6 +214,7 @@ body {
   padding: 48px 48px 52px;
   background-color: #fcfcfc;
   border-radius: 4px;
+
 }
 
 .popover-title {
@@ -226,17 +227,17 @@ body {
   padding-top: 32px;
 }
 
-.popover-form_login input {
+.popover-form__login input {
   margin-bottom: 16px;
 }
 
-.popover-form_password input {
+.popover-form__password input {
   margin-bottom: 32px;
 }
 
 .popover-search-cart input,
-.popover-form_login input,
-.popover-form_password input{
+.popover-form__login input,
+.popover-form__password input{
   width: 324px;
   height: 48px;
   background: #ffffff;
@@ -278,6 +279,7 @@ body {
 }
 
 .popover-links a{
+  margin-left: 5px;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
@@ -355,13 +357,17 @@ body {
   margin-right: 8px;
 }
 
+.catalog-basket {
+  display: none;
+}
+
 a.navbar__link[href]:hover {
   background-color: rgba(252, 252, 252, 0.5);
   border-radius: 26px;
 }
 
 a.navbar__link[href]:focus{
-  background-color: 0 0 0 0 rgba(252, 252, 252, 0.5);
+  background-color: rgba(252, 252, 252, 0.5);
   border-radius: 26px;
   outline: 2px solid #2d3440;
   outline-offset: -2px;
@@ -382,7 +388,7 @@ a.navbar__link[href]:active {
 .search .dropdown__link:focus,
 .login .dropdown__link:focus,
 .basket .dropdown__link:focus{
-  background-color: 0 0 0 0 rgba(252, 252, 252, 0.5);
+  background-color: rgba(252, 252, 252, 0.5);
   border-radius: 26px;
   outline: 2px solid #2d3440;
   outline-offset: -2px;
@@ -573,15 +579,8 @@ a.navbar__link[href]:active {
   align-items: flex-end;
 }
 
-.dots__item {
+.dots-item {
   list-style-type: none;
-}
-
-.dots__item:not(:last-child) {
-  margin-right: 8px;
-}
-
-.dots__item {
   display: block;
   min-height: 12px;
   min-width: 12px;
@@ -589,17 +588,21 @@ a.navbar__link[href]:active {
   border-radius: 100%;
 }
 
-.dots__item--current {
+.dots-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.dots-item--current {
   background-color: #fcfcfc;
 }
 
-.dots__item:hover {
+.dots-item:hover {
   border: 1px solid #fcfcfc;
   background: rgba(252, 252, 252, 0.3);
   border-radius: 100%;
 }
 
-.dots__item:focus {
+.dots-item:focus {
   outline: 1px solid #2D3440;
   background: rgba(252, 252, 252, 0.3);
   border-radius: 100%;
@@ -1005,6 +1008,7 @@ a.navbar__link[href]:active {
 
 .form-input:focus {
   border: 2px solid #2d3440;
+  padding-left: 15px;
 }
 
 .form-input:disabled {
@@ -1384,9 +1388,10 @@ hr {
   padding: 48px;
   background-color: #fcfcfc;
   border-radius: 4px;
+
 }
 
-.popover-catalog-cart_basket .popover-title {
+.popover-catalog-cart__basket .popover-title {
   margin-top: 0;
   margin-bottom: 32px;
 }
@@ -1394,7 +1399,7 @@ hr {
 .cart-item {
   list-style-type: none;
   display: grid;
-  grid-template-columns: 46px 148px 87px 16px;
+  grid-template-columns: 46px 148px 78px 16px;
   gap: 16px;
   margin-bottom: 24px;
   align-items: center;
@@ -1411,6 +1416,7 @@ hr {
   height: 46px;
   border-radius: 50%;
 }
+
 .cart-text {
   margin-top: 4px;
   font-weight: 400;
@@ -1427,6 +1433,11 @@ hr {
 }
 
 .cart-delete-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  min-width: 40px;
   width: 16px;
   height: 16px;
   background: none;
@@ -1681,18 +1692,18 @@ hr {
   position: absolute;
   width: 6px;
   height: 6px;
-  top: 3px;
-  left: 3.6px;
+  top: 4px;
+  left: 4px;
   background-color: #2d3440;
   content: "";
   border-radius: 50%;
 }
 
-.control-input[type="radio"]:hover ~ .control-mark {
+.control-input[type="radio"]:hover ~ .control-mark, .control-input[type="radio"]:checked:focus ~ .control-mark {
   border: 1.3px solid #fcfcfc;
 }
 
-.control-input[type="radio"]:hover ~ .control-mark::before {
+.control-input[type="radio"]:hover ~ .control-mark::before, .control-input[type="radio"]:checked:focus ~ .control-mark::before {
   border: 1.3px solid #fcfcfc;
   background-color: #fcfcfc;
 }
@@ -1713,11 +1724,6 @@ hr {
 
 .percent-item:first-child {
   margin-left: 5px;
-}
-
-.control-input[type="radio"]:checked:focus ~ .control-mark {
-  outline: 1.3px solid #fcfcfc;
-  outline-offset: -1px;
 }
 
 /* Checkbox */
@@ -1743,18 +1749,18 @@ hr {
   display: block;
 }
 
+
 .control svg:hover {
+  fill: #fcfcfc;
+}
+
+.control-input:focus ~ svg {
   fill: #fcfcfc;
 }
 
 .control-input:disabled ~ svg {
   fill: #2d3440;
   opacity: 0.3;
-}
-
-.control-input:focus ~ svg {
-  outline: 1.3px solid #fcfcfc;
-  outline-offset: -1px;
 }
 
 .supplement-item:first-child{
@@ -1959,8 +1965,7 @@ hr {
 
 .modal-close-button {
   position: absolute;
-  padding: 0;
-  margin: 36px 36px 0 0;
+  padding: 32px;
   top: 0;
   right: 0;
   width: 10px;
@@ -1974,7 +1979,7 @@ hr {
 } 
 
 .modal_title {
-  font-family: "Inter" sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -1998,6 +2003,7 @@ hr {
 .comment__text {
   height: 149px;
   padding: 14px 0 0 16px;
+  resize: none;
 }
 .modal__name,
 .modal__mail {

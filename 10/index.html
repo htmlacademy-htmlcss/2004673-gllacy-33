@@ -40,8 +40,8 @@
             <div class="popover popover-search-cart popover-close">
               <div class="popover-content">
                 <form action="https://echo.htmlacademy.ru" method="get">
-                  <label class="visually-hidden" for="text">Поиск</label>
-                  <input class="form-input" type="text" id="text" name="search" placeholder="Поиск по сайту">
+                  <label class="visually-hidden" for="text-for-search">Поиск</label>
+                  <input class="form-input" type="text" id="text-for-search" name="search" placeholder="Поиск по сайту">
                 </form>
               </div>
             </div>
@@ -57,17 +57,17 @@
               <div class="popover-content">
                 <h2 class="popover-title">Личный кабинет</h2>
                 <form class="popover-form" action="https://echo.htmlacademy.ru" method="post">
-                  <div class="popover-form_login">
-                    <label class="visually-hidden" for="text">Электронная почта</label>
-                    <input class="form-input" type="email" id="email" name="email" placeholder="email@example.com" required>
+                  <div class="popover-form__login">
+                    <label class="visually-hidden" for="email-for-lodin">Электронная почта</label>
+                    <input class="form-input" type="email" id="email-for-lodin" name="email" placeholder="email@example.com" required>
                   </div>
-                  <div class="popover-form_password">
-                    <label class="visually-hidden" for="text">Пароль</label>
-                    <input class="form-input" type="password" id="text" placeholder="Пароль" required>
+                  <div class="popover-form__password">
+                    <label class="visually-hidden" for="password-for-lodin">Пароль</label>
+                    <input class="form-input" type="password" id="password-for-lodin" name="password" placeholder="Пароль" required>
                   </div>
                   <div class="popover-enter">
                     <button class="additional-button" type="submit">Войти</button>
-                    <div>
+                    <div class="popover-links">
                       <a href="#">Забыли пароль?</a>
                       <a href="#">Регистрация</a>
                     </div>
@@ -83,7 +83,7 @@
               </svg>
               Пусто
             </a>
-            <div class="popover popover-index-cart_basket popover-close">
+            <div class="popover popover-index-cart__basket popover-close">
               <div class="popover-content">
                 <h2 class="popover-title">Ваша корзина пока пуста</h2>
               </div>
@@ -125,19 +125,74 @@
                 </li>
               </ul>
             </li>
-            <!-- По идее здесь должны быть еще li с подобным наполнением. Для слайдера -->
+            <li class="visually-hidden content__item item">
+              <div class="item__container icecream">
+                <h2 class="icecream__name">Сливочное мороженое<br>со вкусом банана</h2>
+                <p class="icecream__description">Сливочное мороженое с ярким банановым<br> вкусом подарит вам свежесть и наслаждение<br> даже в самый жаркий летний день.</p>
+                <a class="icecream__order common-button" href="./catalog.html">Заказать</a>
+              </div>
+              <ul class="slider__image image">
+                <li class="image__item image__item--current">
+                  <img class="item__img" src="./images/slider/slider2_icecream.png" alt="Мороженое">
+                  <button class="item__chevron left" tabindex="10">
+                    <svg class="left__image" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M9.8033 3.80515C10.063 3.54545 10.063 3.12439 9.8033 2.8647C9.54361 2.605 9.12255 2.605 8.86285 2.8647L4.19477 7.53277C3.93593 7.79162 3.93508 8.21075 4.19221 8.47065C4.19338 8.47183 4.19454 8.47301 4.19572 8.47418L8.8638 13.1423C9.12349 13.402 9.54455 13.402 9.80425 13.1423C10.0639 12.8826 10.0639 12.4615 9.80425 12.2018L5.60545 8.00301L9.8033 3.80515Z"/>
+                    </svg>
+                  </button>
+                  <button class="item__chevron right" tabindex="11">
+                    <svg class="right__image" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.135 2.865a.665.665 0 1 0-.94.94l4.201 4.201-4.201 4.202a.665.665 0 0 0 .94.94l4.669-4.669.003-.002c.26-.26.26-.681 0-.94L7.135 2.864z"/>
+                    </svg>
+                  </button>
+                </li>
+                <li class="image__item item" >
+                  <img class="item__img" src="./images/slider/slider3_icecream.png" alt="Мороженое">
+                </li>
+                <li class="image__item item">
+                  <img class="item__img" src="./images/slider/slider1_icecream.png" alt="Мороженое">
+                </li>
+              </ul>
+            </li>
+            <li class="visually-hidden content__item item">
+              <div class="item__container icecream">
+                <h2 class="icecream__name">Карамельный пломбир<br>с маршмеллоу</h2>
+                <p class="icecream__description">Необычный сладкий десерт с карамельным<br> топпингом и кусочками зефира завоюет<br> сердца сладкоежек всех возрастов.</p>
+                <a class="icecream__order common-button" href="./catalog.html">Заказать</a>
+              </div>
+              <ul class="slider__image image">
+                <li class="image__item image__item--current">
+                  <img class="item__img" src="./images/slider/slider3_icecream.png" alt="Мороженое">
+                  <button class="item__chevron left" tabindex="10">
+                    <svg class="left__image" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M9.8033 3.80515C10.063 3.54545 10.063 3.12439 9.8033 2.8647C9.54361 2.605 9.12255 2.605 8.86285 2.8647L4.19477 7.53277C3.93593 7.79162 3.93508 8.21075 4.19221 8.47065C4.19338 8.47183 4.19454 8.47301 4.19572 8.47418L8.8638 13.1423C9.12349 13.402 9.54455 13.402 9.80425 13.1423C10.0639 12.8826 10.0639 12.4615 9.80425 12.2018L5.60545 8.00301L9.8033 3.80515Z"/>
+                    </svg>
+                  </button>
+                  <button class="item__chevron right" tabindex="11">
+                    <svg class="right__image" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.135 2.865a.665.665 0 1 0-.94.94l4.201 4.201-4.201 4.202a.665.665 0 0 0 .94.94l4.669-4.669.003-.002c.26-.26.26-.681 0-.94L7.135 2.864z"/>
+                    </svg>
+                  </button>
+                </li>
+                <li class="image__item item" >
+                  <img class="item__img" src="./images/slider/slider1_icecream.png" alt="Мороженое">
+                </li>
+                <li class="image__item item">
+                  <img class="item__img" src="./images/slider/slider2_icecream.png" alt="Мороженое">
+                </li>
+              </ul>
+            </li>
           </ul>
           <div class="slider__container">
             <ul class="slider__dots">
-              <li class="dots__item dots__item--current" tabindex="12">
+              <li class="dots-item dots-item--current" tabindex="12">
                 <a class="dots" href="#"></a>
                 <span class="visually-hidden">1</span>
               </li>
-              <li class="dots__item" tabindex="13">
+              <li class="dots-item" tabindex="13">
                 <a class="dots" href="#"></a>
                 <span class="visually-hidden">2</span>
               </li>
-              <li class="dots__item" tabindex="14">
+              <li class="dots-item" tabindex="14">
                 <a class="dots" href="#"></a>
                 <span class="visually-hidden">3</span>
               </li>
@@ -277,8 +332,8 @@
                 <p class="mail__description">Подпишитесь на нашу сладкую рассылку и будьте всегда<br>в курсе всего самого
                   вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
               <form class="mail__form send" action="https://echo.htmlacademy.ru" method="get">
-                <label class="visually-hidden send__label" for="email">Электронная почта</label>
-                <input class="send__address form-input" type="email" id="email" name="email" placeholder="email@example.com" required>
+                <label class="visually-hidden send__label" for="email-for-subscription">Электронная почта</label>
+                <input class="send__address form-input" type="email" id="email-for-subscription" name="email" placeholder="email@example.com" required>
                 <button class="send__button additional-button" type="submit">Отправить</button>
               </form>
               </div>
@@ -298,15 +353,15 @@
               <form class="record__form form" action="https://echo.htmlacademy.ru" method="get">
                 <div class="box__date">
                   <div class="tooltip__container form-label-icon">
-                    <label class="form__label" for="date">Дата</label>
+                    <label class="form__label" for="tooltip-date-input">Дата</label>
                     <span class="tooltip">
                       <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
                         <svg class="tooltip-icon" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 2.333a5.667 5.667 0 1 0 0 11.334A5.667 5.667 0 0 0 8 2.333zM1 8a7 7 0 1 1 14 0A7 7 0 0 1 1 8zm7-.667c.368 0 .667.299.667.667v2.533a.667.667 0 1 1-1.334 0V8c0-.368.299-.667.667-.667zM8 4.8a.667.667 0 1 0 0 1.333h.007a.667.667 0 0 0 0-1.333H8z" fill="#2D3440"/></svg>
                       </button>
-                      <span class="tooltip-text tooltip-date" role="tooltip" id="tooltip-label">Тултип</span>
+                      <span class="tooltip-text tooltip-date" role="tooltip" id="tooltip-date-label">Тултип</span>
                     </span> 
                   </div>
-                  <input class="record__date form-input" type="date" id="date" required>
+                  <input class="record__date form-input" type="date" id="tooltip-date-input" required>
                 </div>
                 <div class="box__phone">
                   <label class="form__label" for="tel">Телефон</label>
@@ -318,19 +373,16 @@
                 </div>
                 <div class="box__address">
                   <div class="tooltip__container">
-                    <label class="form__label" for="address">Адрес</label>
+                    <label class="form__label" for="tooltip-address-input">Адрес</label>
                     <span class="tooltip">
                       <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
                         <svg class="tooltip-icon" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 2.333a5.667 5.667 0 1 0 0 11.334A5.667 5.667 0 0 0 8 2.333zM1 8a7 7 0 1 1 14 0A7 7 0 0 1 1 8zm7-.667c.368 0 .667.299.667.667v2.533a.667.667 0 1 1-1.334 0V8c0-.368.299-.667.667-.667zM8 4.8a.667.667 0 1 0 0 1.333h.007a.667.667 0 0 0 0-1.333H8z" fill="#2D3440"/></svg>
                       </button>
-                      <span class="tooltip-text tooltip-address" role="tooltip" id="tooltip-label">Введите название улицы, дома и квартиры</span>
+                      <span class="tooltip-text tooltip-address" role="tooltip" id="tooltip-address-label">Введите название улицы, дома и квартиры</span>
                     </span>
                   </div>
-                  <input class="record__date form-input" type="text" id="address"
-                    class="record__address"
-                    id="address"
+                  <input class="record__address form-input" type="text" id="tooltip-address-input"
                     name="address"
-                    rows="2"
                     placeholder="ул. Большая Конюшенная, 19/8" required>
                 </div>
                 <button class="form__button additional-button" type="submit">Отправить</button>
@@ -399,23 +451,24 @@
           <a class="author__description" href="https://htmlacademy.ru/">Сделано в <span class="author__html">.html academy</span> © 2021</a>
         </div>
       </footer>
-      <div class="modal_container modal-container-close">
+      <div class="modal__container modal-container-close">
         <div class="modal">
           <button class="modal-close-button" type="button">
             <span class="visually-hidden">Закрыть</span>
           </button>
           <section class="modal__form-box">
-            <h2 class="modal_title">Мы обязательно ответим вам!</h2>
+            <h2 class="modal__title">Мы обязательно ответим вам!</h2>
             <form class="modal__form" action="https://echo.htmlacademy.ru" method="get">
               <div class="modal__name name">
-                <label class="visually-hidden name__label" for="name">Имя и фамилия</label>
-                <input class="name__text form-input" type="text" id="name" placeholder="Имя и фамилия">
+                <label class="visually-hidden name__label" for="modal-name">Имя и фамилия</label>
+                <input class="name__text form-input" type="text" id="modal-name" name="name" placeholder="Имя и фамилия">
               </div>
               <div class="modal__mail mail">
-                <label class="visually-hidden mail__label" for="email">Электронная почта</label>
-                <input class="mail__address form-input" type="email" id="email" name="email" placeholder="email@example.com">
+                <label class="visually-hidden mail__label" for="modal-email">Электронная почта</label>
+                <input class="mail__address form-input" type="email" id="modal-email" name="email" placeholder="email@example.com">
               </div>
               <div class="modal__comment comment">
+                <label class="visually-hidden comment__label" for="comment">Комментарий</label>
                 <textarea class="comment__text form-input" name="text" placeholder="В свободной форме"></textarea>
               </div>
               <button class="modal__button additional-button" type="submit">Отправить</button>

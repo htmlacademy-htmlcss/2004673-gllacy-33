@@ -9,23 +9,42 @@
   <body>
     <div class="container">
       <header class="header">
-        <nav class="header__navigation navigation">
-          <a href="./index.html" class="navigation__logo logo">
+        <nav class="header__navigation">
+          <a class="navigation__logo logo" href="./index.html">
             <img class="logo__img" src="./images/logo/glacy_logo.svg" width="137" height="56" alt="Gllacy logo">
           </a>
-          <ul class="navigation__list navbar">
-            <li class="navbar__item">
-              <a class="navbar__link" href="./catalog.html">Каталог</a>
+          <ul class="navigation__list navigation">
+            <li class="navigation__item navbar">
+              <div class="navbar__container">
+                <a class="navbar__link" href="./catalog.html">Каталог</a>
+                <ul class="navbar__content">
+                  <li class="navbar__item">
+                    <a class="navbar__list--new" href="#">Новинки</a>
+                  </li>
+                  <li class="navbar__item"> 
+                    <a class="navbar__list" href="#">Сливочное</a>
+                  </li>
+                  <li class="navbar__item">
+                    <a class="navbar__list" href="#">Щербеты</a>
+                  </li>
+                  <li class="navbar__item">
+                    <a class="navbar__list" href="#">Фруктовый лед</a>
+                  </li>
+                  <li class="navbar__item">
+                    <a class="navbar__list" href="#">Мелорин</a>
+                  </li>
+                </ul>
+              </div>
             </li>
-            <li class="navbar__item">
+            <li class="navigation__item navbar">
               <a class="navbar__link" href="#">Доставка и оплата</a>
             </li>
-            <li class="navbar__item">
+            <li class="navigation__item navbar">
               <a class="navbar__link" href="#">О компании</a>
             </li>
           </ul>
         </nav>
-        <ul class="header-list dropdown">
+        <ul class="header-dropdown dropdown">
           <li class="dropdown__item">
             <a class="dropdown__link phone" href="tel:+78005558628">+7 800 555-86-28</a>
           </li>
@@ -57,12 +76,12 @@
                 <h2 class="popover-title">Личный кабинет</h2>
                 <form class="popover-form" action="https://echo.htmlacademy.ru" method="post">
                   <div class="popover-form__login">
-                    <label class="visually-hidden" for="email-for-lodin">Электронная почта</label>
-                    <input class="form-input" type="email" id="email-for-lodin" name="email" placeholder="email@example.com" required>
+                    <label class="visually-hidden" for="email-for-login">Электронная почта</label>
+                    <input class="form-input" type="email" id="email-for-login" name="email" placeholder="email@example.com" required>
                   </div>
                   <div class="popover-form__password">
-                    <label class="visually-hidden" for="password-for-lodin">Пароль</label>
-                    <input class="form-input" type="password" id="password-for-lodin" name="password" placeholder="Пароль" required>
+                    <label class="visually-hidden" for="password-for-login">Пароль</label>
+                    <input class="form-input" type="password" id="password-for-login" name="password" placeholder="Пароль" required>
                   </div>
                   <div class="popover-enter">
                     <button class="additional-button" type="submit">Войти</button>
@@ -450,9 +469,9 @@
           <a class="author__description" href="https://htmlacademy.ru/">Сделано в <span class="author__html">.html academy</span> © 2021</a>
         </div>
       </footer>
-      <div class="modal__container modal-container-close">
+      <div class="modal__container modal__close">
         <div class="modal">
-          <button class="modal-close-button" type="button">
+          <button class="modal-close__button" type="button">
             <span class="visually-hidden">Закрыть</span>
           </button>
           <section class="modal__form-box">
@@ -460,15 +479,15 @@
             <form class="modal__form" action="https://echo.htmlacademy.ru" method="get">
               <div class="modal__name name">
                 <label class="visually-hidden name__label" for="modal-name">Имя и фамилия</label>
-                <input class="name__text form-input" type="text" id="modal-name" name="name" placeholder="Имя и фамилия">
+                <input class="name__text form-input" type="text" id="modal-name" name="name" placeholder="Имя и фамилия" required>
               </div>
               <div class="modal__mail mail">
                 <label class="visually-hidden mail__label" for="modal-email">Электронная почта</label>
-                <input class="mail__address form-input" type="email" id="modal-email" name="email" placeholder="email@example.com">
+                <input class="mail__address form-input" type="email" id="modal-email" name="email" placeholder="email@example.com" required>
               </div>
               <div class="modal__comment comment">
-                <label class="visually-hidden comment__label" for="comment">Комментарий</label>
-                <textarea class="comment__text form-input" name="text" placeholder="В свободной форме"></textarea>
+                <label class="visually-hidden comment__label" for="modal-comment">Комментарий</label>
+                <textarea class="comment__text form-input" id="modal-comment" name="text" placeholder="В свободной форме" required></textarea>
               </div>
               <button class="modal__button additional-button" type="submit">Отправить</button>
             </form>

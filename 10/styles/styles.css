@@ -180,7 +180,7 @@ body {
   z-index: 1;
 }
 
-.navbar__content li {
+.navbar__item {
   list-style-type: none;
 }
 
@@ -1451,6 +1451,20 @@ hr {
 
 .navigation__item--current .navbar__link {
   color: #fcfcfc;
+}
+
+.navbar__content--current {
+  display: none;
+  position: absolute;
+  min-width: 138px;
+  top: 76px;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.navbar__container:hover .navbar__content--current {
+  display: block;
 }
 
 /*Popover*/

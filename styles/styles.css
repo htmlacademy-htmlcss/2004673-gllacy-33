@@ -54,11 +54,11 @@ body {
 .container {
   margin: 0 auto;
   width: 1170px;
-  padding: 0 30px;
+  padding: 0 98px;
   box-sizing: content-box;
 }
 
-.main > *:not(:last-child) {
+.main > *:not(:nth-last-child(2)){
   margin-bottom: 80px;
 }
 
@@ -205,6 +205,7 @@ body {
 .navbar__content {
   min-width: 138px;
   max-width: 300px;
+  padding: 8px 0 4px 0;
   background-color: #fcfcfc;
   border-radius: 4px;
   overflow: hidden;
@@ -220,6 +221,7 @@ body {
 
 .navbar__item {
   list-style-type: none;
+  position: relative;
 }
 
 .navbar__list {
@@ -234,26 +236,26 @@ body {
   line-height: 20px;
 }
 
-.navbar-item-new__highligted {
+.navbar-item--highligted {
   display: block;
   position: relative;
-  padding-top: 8px;
-  padding-bottom: 4px;
+}
+
+.navbar-item--highligted .navbar__list {
   font-size: 14px;
   line-height: 20px;
   text-decoration: none;
+  font-weight: 700;
   color: #2d3440;
 }
 
-.navbar-item-new__highligted:last-child {
-  padding-bottom: 12px;
-  font-weight: 700;
-  margin-bottom: 12px;
+.navbar-item--highligted + *:not(.navbar-item--highligted) {
+  margin-top: 8px;
 }
 
-.navbar-item-new__highligted::after {
+.navbar-item--highligted + *:not(.navbar-item--highligted)::after {
   position: absolute;
-  top: 43px;
+  top: -4px;
   left: 16px;
   content: "";
   min-width: 106px;
@@ -270,18 +272,13 @@ body {
   background-color: #ffcbd8;
 }
 
-.navbar-item-new__highligted:focus {
+.navbar-item--highligted:focus {
   background-color: #ff7799;
   color: #fcfcfc;
 }
 
 .link-active {
   background-color: #ff4a78;
-  color: #fcfcfc;
-}
-
-.navbar-item-new__highligted:focus {
-  background-color: #ff7799;
   color: #fcfcfc;
 }
 
@@ -953,13 +950,19 @@ a.navbar__link[href]:active {
 
 /*Advantages*/
 
+.main__advantages {
+  margin-bottom: 76px;
+}
+
 .advantages__background {
   display: flex;
   min-height: 480px;
   width: 1170px;
   background-image: url("../images/background/waffle_background.jpg");
+  background-size: cover;
   border-radius: 16px;
   object-fit: cover;
+  background-color: #ebe0c2;
 }
 
 .advantages__container {
@@ -984,12 +987,14 @@ a.navbar__link[href]:active {
   gap: 31px;
   column-gap: 31px;
   row-gap: 40px;
-  grid-template-columns: 506px 506px;
-  grid-template-rows: 66px 66px;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
   margin: 56px auto 56px auto;
 }
 
 .advantage__item {
+  display: flex;
+  min-height: 66px;
   width: 506px;
   font-weight: normal;
   line-height: 22px;
@@ -1030,6 +1035,7 @@ a.navbar__link[href]:active {
 }
 
 .info__blog {
+  padding: 32px;
   width: 570px;
   min-height: 220px;
   background: url("../images/background/news_background.jpg");
@@ -1037,11 +1043,12 @@ a.navbar__link[href]:active {
   background-position: center center;
   background-size: cover;
   border-radius: 16px;
+  background-color: #ffffff;
 }
 
 .blog__description {
   display: flex;
-  margin: 32.59px 0 12.22px 32px;
+  margin-bottom: 12px;
   font-weight: normal;
   line-height: 20px;
   color: #565c66;
@@ -1057,7 +1064,6 @@ a.navbar__link[href]:active {
 }
 
 .blog__title h4 {
-  margin-left: 32px;
   width: 303px;
 }
 
@@ -1065,7 +1071,6 @@ a.navbar__link[href]:active {
 
 .info__mail {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   width: 570px;
   min-height: 220px;
@@ -1073,9 +1078,11 @@ a.navbar__link[href]:active {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 16px;
+  background-color: #ffffff;
 }
 
 .mail__container {
+  padding: 26px 24px 26px 26px;
   display: flex;
   flex-direction: column;
   margin: 6px;
@@ -1086,7 +1093,6 @@ a.navbar__link[href]:active {
 }
 
 .mail__description {
-  margin: 26px 26px 0 26px;
   width: 506px;
   font-weight: normal;
   line-height: 22px;
@@ -1094,13 +1100,16 @@ a.navbar__link[href]:active {
 }
 
 .mail__form {
-  margin: 0 24px 26px 26px;
+  margin-top: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .send__address {
   padding: 14px 160px 14px 16px;
-  margin-top: 42px;
-  width: 332px;
+  margin-right: 24px;
+  width: 100%;
   height: 48px;
   background: #ffffff;
   border: 1px solid #b9b9b9;
@@ -1110,11 +1119,10 @@ a.navbar__link[href]:active {
   font-size: 16px;
   line-height: 20px;
   color: #2d3440;
-  margin-right: 20px;
 }
 
 .send__button {
-  max-width: 152px;
+  max-width: 250px;
   color: #fcfcfc;
   text-align: center;
   background: #ff2f64;
@@ -1123,6 +1131,10 @@ a.navbar__link[href]:active {
 }
 
 /*Delivery*/
+
+.main__delivery {
+  margin-bottom: 0 !important;
+}
 
 .delivery__container {
   display: flex;
@@ -1133,6 +1145,7 @@ a.navbar__link[href]:active {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 16px;
+  background-color: #ffffff;
 }
 
 .delivery__background {
@@ -1322,6 +1335,7 @@ a.navbar__link[href]:active {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 16px;
+  background-color: #ede1e1;
 }
 
 .location-container {
@@ -1335,7 +1349,6 @@ a.navbar__link[href]:active {
 
 .location__description{
   margin-bottom: 12px;
-  width: 203px;
   font-weight: normal;
   line-height: 22px;
   color: #565c66;
@@ -1343,7 +1356,6 @@ a.navbar__link[href]:active {
 
 .location-time {
   margin-bottom: 32px;
-  width: 160px;
   font-size: 14px;
   line-height: 20px;
 }
@@ -1351,16 +1363,13 @@ a.navbar__link[href]:active {
 .location__street{
   display: flex;
   margin: 12px 0 8px 0;
-  width: 263px;
   font-weight: bold;
   font-size: 20px;
   line-height: 24px;
 }
 
 .main-information {
-  display: flex;
   margin-bottom: 0;
-  max-width: 262px;
   line-height: 20px;
   text-decoration: none;
   color: #2d3440;
@@ -1567,6 +1576,7 @@ hr {
 
 .navbar__content--current {
   min-width: 138px;
+  padding: 8px 0 4px 0;
   background-color: #fcfcfc;
   border-radius: 4px;
   overflow: hidden;
@@ -1759,7 +1769,9 @@ hr {
   background: rgba(252,252,252,0.4);
   border-radius: 20px;
   outline: 1px solid #fcfcfc;
-  
+  background-image: url("../images/icon/arrow_down_icon.svg");
+  background-repeat: no-repeat;
+  background-position: right 13px center;
 }
 
 .box__form {
@@ -1967,16 +1979,12 @@ hr {
   margin-left: 8px;
 }
 
+.supplement-item:nth-child(3) {
+  margin-left: 4px;
+}
+
 .supplement-item:not(:last-child) {
   margin-right: 24px;
-}
-
-.supplement-item:nth-child(2) {
-  margin-right: 30px;
-}
-
-.supplement-item:not(:last-child) {
-  margin-right: 16px;
 }
 
 .box__supplement {
@@ -2038,7 +2046,7 @@ hr {
   font-weight: 900;
   font-size: 32px;
   line-height: 46px;
-  margin: 17px 0 38px 0;
+  margin: 17px 0 35px 0;
 }
 
 .container__form {

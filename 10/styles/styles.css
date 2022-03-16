@@ -204,6 +204,7 @@ body {
 
 .navbar__content {
   min-width: 138px;
+  max-width: 300px;
   background-color: #fcfcfc;
   border-radius: 4px;
   overflow: hidden;

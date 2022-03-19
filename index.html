@@ -54,17 +54,19 @@
             <a class="dropdown__link phone" href="tel:+78005558628">+7 800 555-86-28</a>
           </li>
           <li class="dropdown__item search">
-            <a class="dropdown__link" href="#">
+            <button class="dropdown__link" type="button">
               <svg class="dropdown__icon" aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M1.91286 7.24625C1.91286 4.30073 4.30068 1.91292 7.2462 1.91292C10.1917 1.91292 12.5795 4.30073 12.5795 7.24625C12.5795 8.68547 12.0095 9.99154 11.0828 10.951C11.0582 10.9695 11.0346 10.99 11.0123 11.0124C10.9899 11.0347 10.9694 11.0583 10.9509 11.0829C9.99146 12.0095 8.6854 12.5796 7.2462 12.5796C4.30068 12.5796 1.91286 10.1918 1.91286 7.24625ZM11.4653 12.4082C10.3161 13.3487 8.84703 13.9129 7.2462 13.9129C3.5643 13.9129 0.579529 10.9281 0.579529 7.24625C0.579529 3.56435 3.5643 0.579582 7.2462 0.579582C10.9281 0.579582 13.9129 3.56435 13.9129 7.24625C13.9129 8.84711 13.3486 10.3162 12.4081 11.4654L15.2176 14.2749C15.4779 14.5352 15.4779 14.9573 15.2176 15.2177C14.9572 15.478 14.5351 15.478 14.2748 15.2177L11.4653 12.4082Z" fill="#2D3440"/>
               </svg>
               <span class="visually-hidden">Поиск.</span>
-            </a>
+            </button>
             <div class="popover popover-search-cart popover-close">
               <div class="popover-content">
                 <form action="https://echo.htmlacademy.ru" method="get">
                   <label class="visually-hidden" for="text-for-search">Поиск.</label>
-                  <input class="form-input" type="text" id="text-for-search" name="search" placeholder="Поиск по сайту">
+                  <input class="search-input form-input" type="text" id="text-for-search" name="search" placeholder="Поиск по сайту" required>
+                  <button class="search-close" type="reset"></button>
+                  <span class="visually-hidden">Удалить.</span>
                 </form>
               </div>
             </div>
@@ -131,11 +133,13 @@
                     <svg class="left__image" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M9.8033 3.80515C10.063 3.54545 10.063 3.12439 9.8033 2.8647C9.54361 2.605 9.12255 2.605 8.86285 2.8647L4.19477 7.53277C3.93593 7.79162 3.93508 8.21075 4.19221 8.47065C4.19338 8.47183 4.19454 8.47301 4.19572 8.47418L8.8638 13.1423C9.12349 13.402 9.54455 13.402 9.80425 13.1423C10.0639 12.8826 10.0639 12.4615 9.80425 12.2018L5.60545 8.00301L9.8033 3.80515Z"/>
                     </svg>
+                    <span class="visually-hidden">Предыдущий слайд.</span>
                   </button>
                   <button class="item__chevron right" tabindex="11">
                     <svg class="right__image" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M7.135 2.865a.665.665 0 1 0-.94.94l4.201 4.201-4.201 4.202a.665.665 0 0 0 .94.94l4.669-4.669.003-.002c.26-.26.26-.681 0-.94L7.135 2.864z"/>
                     </svg>
+                    <span class="visually-hidden">Следующий слайд.</span>
                   </button>
                 </li>
                 <li class="image__item item" >
@@ -159,11 +163,13 @@
                     <svg class="left__image" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M9.8033 3.80515C10.063 3.54545 10.063 3.12439 9.8033 2.8647C9.54361 2.605 9.12255 2.605 8.86285 2.8647L4.19477 7.53277C3.93593 7.79162 3.93508 8.21075 4.19221 8.47065C4.19338 8.47183 4.19454 8.47301 4.19572 8.47418L8.8638 13.1423C9.12349 13.402 9.54455 13.402 9.80425 13.1423C10.0639 12.8826 10.0639 12.4615 9.80425 12.2018L5.60545 8.00301L9.8033 3.80515Z"/>
                     </svg>
+                    <span class="visually-hidden">Назад.</span>
                   </button>
                   <button class="item__chevron right" tabindex="11">
                     <svg class="right__image" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M7.135 2.865a.665.665 0 1 0-.94.94l4.201 4.201-4.201 4.202a.665.665 0 0 0 .94.94l4.669-4.669.003-.002c.26-.26.26-.681 0-.94L7.135 2.864z"/>
                     </svg>
+                    <span class="visually-hidden">Вперед.</span>
                   </button>
                 </li>
                 <li class="image__item item" >
@@ -187,11 +193,13 @@
                     <svg class="left__image" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M9.8033 3.80515C10.063 3.54545 10.063 3.12439 9.8033 2.8647C9.54361 2.605 9.12255 2.605 8.86285 2.8647L4.19477 7.53277C3.93593 7.79162 3.93508 8.21075 4.19221 8.47065C4.19338 8.47183 4.19454 8.47301 4.19572 8.47418L8.8638 13.1423C9.12349 13.402 9.54455 13.402 9.80425 13.1423C10.0639 12.8826 10.0639 12.4615 9.80425 12.2018L5.60545 8.00301L9.8033 3.80515Z"/>
                     </svg>
+                    <span class="visually-hidden">Назад.</span>
                   </button>
                   <button class="item__chevron right" tabindex="11">
                     <svg class="right__image" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M7.135 2.865a.665.665 0 1 0-.94.94l4.201 4.201-4.201 4.202a.665.665 0 0 0 .94.94l4.669-4.669.003-.002c.26-.26.26-.681 0-.94L7.135 2.864z"/>
                     </svg>
+                    <span class="visually-hidden">Вперед.</span>
                   </button>
                 </li>
                 <li class="image__item item" >
@@ -207,15 +215,15 @@
             <ul class="slider__dots">
               <li class="dots-item dots-item--current" tabindex="12">
                 <a class="dots" href="#"></a>
-                <span class="visually-hidden">1.</span>
+                <span class="visually-hidden">Слайд 1.</span>
               </li>
               <li class="dots-item" tabindex="13">
                 <a class="dots" href="#"></a>
-                <span class="visually-hidden">2.</span>
+                <span class="visually-hidden">Слайд 2.</span>
               </li>
               <li class="dots-item" tabindex="14">
                 <a class="dots" href="#"></a>
-                <span class="visually-hidden">3.</span>
+                <span class="visually-hidden">Слайд 3.</span>
               </li>
             </ul>
             <ul class="slider__social socials">

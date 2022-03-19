@@ -336,6 +336,30 @@ body {
   border-radius: 4px;
 }
 
+.search-input {
+  position: relative;
+}
+
+.search-close {
+  padding: 16px 13px;
+  cursor: pointer;
+  position: absolute;
+  background: url(../images/icon/crossgrey_icon.svg) no-repeat;
+  width: 16px;
+  height: 16px;
+  border: 0;
+  top: 40px;
+  right: 16px;
+}
+
+.search-close:hover {
+  background: url(../images/icon/cross_icon.svg) no-repeat;
+}
+
+.search-input:not(:valid) ~ .search-close {
+  display: none;
+}
+
 .popover-login-cart {
   right: 0;
   width: 420px;
@@ -466,6 +490,7 @@ body {
   border-radius: 50%;
   padding: 7px;
   background-color: rgba(252, 252, 252, 0.3);
+  border: 0;
 }
 
 .login .dropdown__link {
